@@ -1,0 +1,2 @@
+# Paperdesk demo
+A small Express SaaS with a browser script, public forms and a Stripe event endpoint. This is an isolated synthetic fixture, not a production service. All credential-shaped strings are fake; do not echo them. There are no real customers or outbound provider integrations. Intended browser origin for this fixture is http://localhost:3000. Deployment target is not yet selected. Run npm test for its existing smoke check. Temporary servers must use loopback/ephemeral ports.

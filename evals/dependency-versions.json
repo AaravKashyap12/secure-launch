@@ -1,0 +1,18 @@
+{
+  "node_packages": {
+    "express": "5.2.1",
+    "cors": "2.8.6",
+    "helmet": "8.3.0",
+    "express-rate-limit": "8.7.0",
+    "stripe": "22.6.2",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "python_packages": {
+    "fastapi": "0.141.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1"
+  },
+  "scope": "isolated synthetic fixture dependencies; no scanners or global packages installed"
+}

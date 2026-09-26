@@ -1,0 +1,15 @@
+import express from 'express';
+import cors from 'cors';
+import {fileURLToPath} from 'node:url';
+export const app=express();
+app.disable('x-powered-by');
+app.use(cors({origin:true,credentials:true}));
+app.use(express.json());
+app.get('/health',(_req,res)=>res.json({ok:true}));
+app.post('/login',(_req,res)=>res.json({message:'Demo login received'}));
+app.post('/signup',(_req,res)=>res.json({message:'Demo signup received'}));
+app.post('/contact',(_req,res)=>res.json({message:'Demo message received'}));
+let events=0;
+app.post('/webhooks/stripe',(req,res)=>{ events++;res.json({accepted:true,events,type:req.body.type}); });
+app.use('/client',express.static(fileURLToPath(new URL('./client',import.meta.url))));
+if(process.argv[1]===fileURLToPath(import.meta.url))app.listen(Number(process.env.PORT||0),'127.0.0.1',function(){console.log('Local fixture port '+this.address().port)});

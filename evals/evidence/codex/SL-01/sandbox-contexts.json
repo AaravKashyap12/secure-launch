@@ -1,0 +1,10 @@
+[
+  {
+    "model": "gpt-5.6-terra",
+    "effort": "medium",
+    "approval_policy": "never",
+    "sandbox_policy": {
+      "type": "read-only"
+    }
+  }
+]

@@ -1,0 +1,2220 @@
+{
+  "read_date": "2026-09-27",
+  "phase": 3,
+  "sources": [
+    {
+      "id": "O01",
+      "title": "OWASP Top 10:2025",
+      "edition": "2025 final release",
+      "url": "https://owasp.org/Top10/2025/",
+      "date": "2026-09-27",
+      "supports": "A web-app baseline covering access control, configuration, supply chain, crypto, injection, design, authentication, integrity, logging, and exceptional-condition handling.",
+      "limits": "An awareness taxonomy, not a project-specific checklist or proof that a control works.",
+      "status": "read"
+    },
+    {
+      "id": "O02",
+      "title": "OWASP Application Security Verification Standard",
+      "edition": "5.0.0 stable",
+      "url": "https://asvs.owasp.org/",
+      "date": "2026-09-27",
+      "supports": "A versioned catalogue of web-application verification requirements; its levels are assurance-depth selections for scoping verification, not a generic ranking of product risk.",
+      "limits": "The landing page confirmed 5.0.0 but did not expose the detailed level definitions in the fetched extract; cite the version with individual requirements before prescribing a level. Owner resolved level wording using pinned source S26.",
+      "status": "read; level-detail gap recorded"
+    },
+    {
+      "id": "O03",
+      "title": "OWASP API Security Top 10",
+      "edition": "2023 final edition",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+      "date": "2026-09-27",
+      "supports": "API checks for object and function authorization, authentication, resource consumption, sensitive business flows, SSRF, configuration, inventory, and third-party API use.",
+      "limits": "API-focused guidance; it does not replace web, mobile, or cloud configuration guidance.",
+      "status": "read"
+    },
+    {
+      "id": "O04",
+      "title": "OWASP Top 10 for LLM Applications and Generative AI",
+      "edition": "2025",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "date": "2026-09-27",
+      "supports": "AI-feature modules for prompt injection, sensitive-data disclosure, supply chain, poisoning, output handling, agency, prompt leakage, vector/embedding isolation, misinformation, and bounded consumption.",
+      "limits": "A risk catalogue; each application still needs code-enforced authorization, validation, and product-specific abuse controls.",
+      "status": "read"
+    },
+    {
+      "id": "O05",
+      "title": "OWASP Mobile Application Security Verification Standard",
+      "edition": "rolling documentation; exact release unknown",
+      "url": "https://mas.owasp.org/MASVS/",
+      "date": "2026-09-27",
+      "supports": "Mobile modules for storage, cryptography, authentication/authorization, network communication, platform interaction, code quality, resilience, and privacy.",
+      "limits": "The fetched page did not display a release number; do not label it with an inferred version. Release number resolved by S24: 2.1.0.",
+      "status": "read"
+    },
+    {
+      "id": "O06",
+      "title": "OWASP Mobile Application Security Testing Guide",
+      "edition": "rolling documentation; exact release unknown",
+      "url": "https://mas.owasp.org/MASTG/",
+      "date": "2026-09-27",
+      "supports": "Mobile testing references aligned to the MAS project, useful when a repository contains a native mobile app.",
+      "limits": "The fetched page did not display a release number; it is testing guidance and does not establish compliance by itself. Release number resolved by S25: 2.0.0.",
+      "status": "read"
+    },
+    {
+      "id": "O07",
+      "title": "OWASP Authentication Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Authentication flows: generic failure handling, automated-attack resistance, MFA, and event monitoring.",
+      "limits": "Choose controls and thresholds for the product; the page is not a turnkey authentication design.",
+      "status": "read"
+    },
+    {
+      "id": "O08",
+      "title": "OWASP Session Management Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Session-cookie and lifecycle checks when an app uses browser sessions.",
+      "limits": "Applies differently to token-based native and service-to-service clients.",
+      "status": "read"
+    },
+    {
+      "id": "O09",
+      "title": "OWASP Password Storage Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Password-hash storage checks for applications that own password verification.",
+      "limits": "Does not apply when an external identity provider alone owns passwords.",
+      "status": "read"
+    },
+    {
+      "id": "O10",
+      "title": "OWASP Input Validation Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Boundary validation and allow-list-oriented handling for untrusted request data.",
+      "limits": "Validation complements output encoding and authorization; it is not a substitute for either.",
+      "status": "read"
+    },
+    {
+      "id": "O11",
+      "title": "OWASP Cross-Site Request Forgery Prevention Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "CSRF protections for state-changing browser requests authenticated by cookies.",
+      "limits": "Usually not applicable to non-browser or bearer-token-only flows; confirm the client/auth model.",
+      "status": "read"
+    },
+    {
+      "id": "O12",
+      "title": "OWASP Server-Side Request Forgery Prevention Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Controls for server-side URL fetching, including allowlisting and network-boundary safeguards.",
+      "limits": "Only applies when the service follows user- or content-influenced URLs; DNS and redirect behavior need stack-specific handling.",
+      "status": "read"
+    },
+    {
+      "id": "O13",
+      "title": "OWASP File Upload Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Upload controls such as allowed formats, size bounds, storage separation, and handling of untrusted files.",
+      "limits": "Applies only to upload or import features; malware scanning and retention are deployment choices.",
+      "status": "read"
+    },
+    {
+      "id": "O14",
+      "title": "OWASP Secrets Management Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Secret lifecycle, access, rotation, and non-disclosure practices for source and runtime configuration.",
+      "limits": "A local source scan can detect patterns but cannot prove a credential is valid or safely rotated.",
+      "status": "read"
+    },
+    {
+      "id": "O15",
+      "title": "OWASP Logging Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Security-event logging and safe treatment of sensitive or untrusted log data.",
+      "limits": "Logging policy is not monitoring coverage; operational retention and alerting require environment-specific setup.",
+      "status": "read"
+    },
+    {
+      "id": "O16",
+      "title": "OWASP REST Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "HTTPS, endpoint-local access control, and token/API design checks for REST services.",
+      "limits": "Designed for REST-style APIs; do not use it as the sole reference for GraphQL or browser pages.",
+      "status": "read"
+    },
+    {
+      "id": "O17",
+      "title": "OWASP GraphQL Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "GraphQL validation, authorization, query-cost, batching, and introspection-aware review.",
+      "limits": "Applies only when GraphQL is present; schema and resolver behavior still need local inspection.",
+      "status": "read"
+    },
+    {
+      "id": "O18",
+      "title": "OWASP Node.js Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Node-specific application, error, server, and platform hardening pointers.",
+      "limits": "Framework and hosting defaults vary; validate against the actual Node stack.",
+      "status": "read"
+    },
+    {
+      "id": "O19",
+      "title": "OWASP Django Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Django_Security_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Django checks including production debug state, built-in authentication protections, dependency upkeep, and throttling options.",
+      "limits": "Django defaults can be overridden; inspect settings and deployment configuration locally.",
+      "status": "read"
+    },
+    {
+      "id": "O20",
+      "title": "OWASP Docker Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Container checks such as timely updates, avoiding Docker-socket exposure, and running as an unprivileged user.",
+      "limits": "Container image review does not assess the host or orchestrator configuration.",
+      "status": "read"
+    },
+    {
+      "id": "O21",
+      "title": "OWASP Kubernetes Security Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Cluster host, component, build, deployment, and runtime security coverage.",
+      "limits": "Use only where Kubernetes manifests or a cluster target exist; local manifests cannot prove managed-cluster posture.",
+      "status": "read"
+    },
+    {
+      "id": "O22",
+      "title": "OWASP HTTP Headers Cheat Sheet",
+      "edition": "unversioned rolling cheat sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html",
+      "date": "2026-09-27",
+      "supports": "Response-header choices, including browser-facing security headers and deployment considerations.",
+      "limits": "A Content Security Policy needs staged, app-specific validation; headers should be checked against a local response.",
+      "status": "read"
+    },
+    {
+      "id": "O23",
+      "title": "OWASP Cheat Sheet Series",
+      "edition": "unversioned rolling collection",
+      "url": "https://cheatsheetseries.owasp.org/",
+      "date": "2026-09-27",
+      "supports": "The collection and maintenance context for the topical cheat sheets above.",
+      "limits": "An index, not a single prescriptive launch standard.",
+      "status": "read"
+    },
+    {
+      "id": "P01",
+      "title": "OpenSSF Scorecard README and checks",
+      "edition": "unversioned",
+      "url": "https://github.com/ossf/scorecard",
+      "date": "2026-09-27",
+      "supports": "A release checklist can inspect public-repository practices such as workflow risks, branch protection, token permissions, packaging, and signed releases.",
+      "limits": "Scorecard is an assessment tool and does not replace repository-specific review.",
+      "status": "read"
+    },
+    {
+      "id": "P02",
+      "title": "SLSA Security levels",
+      "edition": "v1.1",
+      "url": "https://slsa.dev/spec/v1.1/levels",
+      "date": "2026-09-27",
+      "supports": "Build L1 records provenance, L2 requires hosted signed provenance and consumer validation, and L3 adds hardened build isolation.",
+      "limits": "SLSA describes supply-chain guarantees; it does not assess application authorization or runtime configuration. Owner confirmed Approved v1.2 in S20; v1.1 is historical, not the current baseline.",
+      "status": "read"
+    },
+    {
+      "id": "P03",
+      "title": "Concise Guide for Developing More Secure Software",
+      "edition": "2023-06-14",
+      "url": "https://best.openssf.org/Concise-Guide-for-Developing-More-Secure-Software",
+      "date": "2026-09-27",
+      "supports": "Checklist prompts for MFA on privileged developer accounts, dependency selection and monitoring, tests, secret prevention, review, a security policy, signed releases, SBOMs, and SLSA.",
+      "limits": "It is broad guidance; individual changes need stack-specific validation.",
+      "status": "read"
+    },
+    {
+      "id": "P04",
+      "title": "GitHub Actions hardening documentation",
+      "edition": "unversioned",
+      "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-your-deployments",
+      "date": "2026-09-27",
+      "supports": "No rule recorded: the requested documentation URL returned 404 during this pass.",
+      "limits": "Use a current GitHub Docs URL before turning this into a normative checklist item. Correct current path was read as S21.",
+      "status": "unavailable (404)"
+    },
+    {
+      "id": "P05",
+      "title": "OpenSSF Scorecard beginner checks for GitHub workflows",
+      "edition": "unversioned",
+      "url": "https://github.com/ossf/scorecard/blob/main/docs/beginner-checks.md",
+      "date": "2026-09-27",
+      "supports": "Default workflow token permissions should be restrictive and each action should receive only permissions it needs.",
+      "limits": "This does not establish a complete GitHub repository-security baseline.",
+      "status": "read"
+    },
+    {
+      "id": "P06",
+      "title": "npm trusted publishing",
+      "edition": "unversioned",
+      "url": "https://docs.npmjs.com/trusted-publishers/",
+      "date": "2026-09-27",
+      "supports": "npm can use a configured OIDC trusted publisher from supported cloud CI, avoiding long-lived publish tokens; public packages from public repositories can receive automatic provenance.",
+      "limits": "Only applies to npm publication, and provenance has documented public-repository limitations.",
+      "status": "read"
+    },
+    {
+      "id": "P07",
+      "title": "PyPI trusted publishers",
+      "edition": "unversioned",
+      "url": "https://docs.pypi.org/trusted-publishers/",
+      "date": "2026-09-27",
+      "supports": "PyPI can exchange CI OIDC identity for a short-lived, project-scoped publishing token instead of placing a long-lived API token in CI.",
+      "limits": "Applies only to package publication workflows configured as trusted publishers.",
+      "status": "read"
+    },
+    {
+      "id": "P08",
+      "title": "Supabase Row Level Security",
+      "edition": "unversioned",
+      "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+      "date": "2026-09-27",
+      "supports": "For every exposed table, pair least-privilege grants with operation-specific RLS policies and allow/deny tests; service-role/secret keys bypass RLS and belong only on the server.",
+      "limits": "The correct policies depend on the product's authorization model; migration and RLS-policy changes require explicit approval.",
+      "status": "read"
+    },
+    {
+      "id": "P09",
+      "title": "Firebase Security Rules",
+      "edition": "unversioned",
+      "url": "https://firebase.google.com/docs/rules",
+      "date": "2026-09-27",
+      "supports": "Firebase deployments need reviewed service-specific rules rather than relying on default open access.",
+      "limits": "Fetched page content was navigation-heavy in this pass; consult the service-specific Rules testing documentation before prescribing exact syntax.",
+      "status": "read, narrow support only"
+    },
+    {
+      "id": "P10",
+      "title": "Vercel security documentation",
+      "edition": "unversioned",
+      "url": "https://vercel.com/docs/security",
+      "date": "2026-09-27",
+      "supports": "Conditional hosting review point for Vercel projects.",
+      "limits": "Fetch completed but extracted body was elided by the tool output; no precise platform configuration rule is recorded.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P11",
+      "title": "Netlify secure access documentation",
+      "edition": "unversioned",
+      "url": "https://docs.netlify.com/security/secure-access-to-sites/",
+      "date": "2026-09-27",
+      "supports": "Conditional hosting review point for Netlify projects.",
+      "limits": "Fetch completed but extracted body was elided by the tool output; no precise platform configuration rule is recorded.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P12",
+      "title": "Cloudflare account security documentation",
+      "edition": "unversioned",
+      "url": "https://developers.cloudflare.com/fundamentals/setup/account/account-security/",
+      "date": "2026-09-27",
+      "supports": "Conditional hosting review point for Cloudflare projects.",
+      "limits": "Fetch completed but extracted body was elided by the tool output; no precise platform configuration rule is recorded.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P13",
+      "title": "AWS shared responsibility model",
+      "edition": "unversioned",
+      "url": "https://aws.amazon.com/compliance/shared-responsibility-model/",
+      "date": "2026-09-27",
+      "supports": "Conditional AWS review should distinguish AWS-managed infrastructure responsibilities from customer configuration responsibilities.",
+      "limits": "The shared-responsibility model does not provide resource-specific hardening settings.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P14",
+      "title": "Amazon S3 Block Public Access",
+      "edition": "unversioned",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html",
+      "date": "2026-09-27",
+      "supports": "Public-storage exposure is a conditional launch check for S3-backed uploads and assets.",
+      "limits": "Fetched as primary documentation but no exact configuration assertion is recorded here because the output was elided. Owner added direct official page S31.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P15",
+      "title": "Stripe webhook signature verification",
+      "edition": "unversioned",
+      "url": "https://docs.stripe.com/webhooks/signature",
+      "date": "2026-09-27",
+      "supports": "Verify Stripe-Signature using the endpoint secret and the unchanged UTF-8 request body; body parsers must not alter the webhook body before verification.",
+      "limits": "This does not by itself define event replay handling or application business logic.",
+      "status": "read"
+    },
+    {
+      "id": "P16",
+      "title": "Stripe idempotent requests",
+      "edition": "unversioned",
+      "url": "https://docs.stripe.com/api/idempotent_requests",
+      "date": "2026-09-27",
+      "supports": "Conditional payments module should review idempotency for client retries.",
+      "limits": "Fetched as primary documentation but no exact configuration assertion is recorded here because the output was elided. Owner completed direct reading in S27.",
+      "status": "read, evidence extraction limited"
+    },
+    {
+      "id": "P17",
+      "title": "Next.js environment variables",
+      "edition": "unversioned",
+      "url": "https://nextjs.org/docs/app/guides/environment-variables",
+      "date": "2026-09-27",
+      "supports": "`NEXT_PUBLIC_` is a client-exposure marker and must be treated as unsuitable for secrets.",
+      "limits": "Exact page content was elided in the combined fetch; verify the current framework wording before citation in a public skill. Owner added direct official page S30; no unverified runtime-version claim.",
+      "status": "read, narrow support only"
+    },
+    {
+      "id": "P18",
+      "title": "Vite environment variables and modes",
+      "edition": "unversioned",
+      "url": "https://vite.dev/guide/env-and-mode",
+      "date": "2026-09-27",
+      "supports": "`VITE_` values are bundled into client source, so they must not contain sensitive values; local env files should be ignored by Git.",
+      "limits": "The prefix rule is Vite-specific and is not a generic secret-detection rule.",
+      "status": "read"
+    },
+    {
+      "id": "P19",
+      "title": "Express behind proxies",
+      "edition": "unversioned",
+      "url": "https://expressjs.com/en/guide/behind-proxies.html",
+      "date": "2026-09-27",
+      "supports": "Rate-limiting and logging should use a client IP derived from a proxy setup that exactly matches deployment; blindly setting `trust proxy` to true can allow client-supplied forwarded headers to control the value.",
+      "limits": "The proper trust configuration depends on the actual proxy chain and must be tested in that deployment topology.",
+      "status": "read"
+    },
+    {
+      "id": "S01",
+      "title": "MITRE CWE Top 25",
+      "edition": "2025; current landing page lists this year",
+      "url": "https://cwe.mitre.org/top25/",
+      "date": "2026-09-27",
+      "supports": "Prioritization context for recurring software weakness classes.",
+      "limits": "Population ranking is not an application-specific risk score.",
+      "status": "read"
+    },
+    {
+      "id": "S02",
+      "title": "NIST Secure Software Development Framework",
+      "edition": "SP 800-218 / SSDF 1.1; final February 2022",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "date": "2026-09-27",
+      "supports": "Lifecycle practices, security requirements, release integrity and vulnerability response.",
+      "limits": "A framework to tailor, not a certification or automatic checklist.",
+      "status": "read"
+    },
+    {
+      "id": "S03",
+      "title": "NIST SSDF revision",
+      "edition": "SP 800-218 Rev. 1 / 1.2; initial public draft, December 17 2025",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/r1/ipd",
+      "date": "2026-09-27",
+      "supports": "Identifies the newer draft and prevents presenting it as the final baseline.",
+      "limits": "Draft status explicit; normative recommendations use S02 until a final successor is verified.",
+      "status": "read"
+    },
+    {
+      "id": "S04",
+      "title": "NIST Digital Identity Guidelines: Authentication",
+      "edition": "SP 800-63B-4; final July 2025",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/b/4/final",
+      "date": "2026-09-27",
+      "supports": "Confirms the current revision and its authentication scope.",
+      "limits": "Government-system scope; do not claim every commercial app is legally bound by it.",
+      "status": "read"
+    },
+    {
+      "id": "S05",
+      "title": "NIST authenticator requirements",
+      "edition": "800-63B-4, section 3",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+      "date": "2026-09-27",
+      "supports": "Password-only minimum is 15 characters; MFA passwords may use 8. Supports blocklists and avoiding composition rules and routine forced changes.",
+      "limits": "Separate centrally checked passwords from device unlock secrets; changes to existing auth require approval.",
+      "status": "read"
+    },
+    {
+      "id": "S06",
+      "title": "CISA Secure by Design hub and joint guidance",
+      "edition": "Current hub unavailable; October 2023 joint paper seen in primary-source index",
+      "url": "https://www.cisa.gov/securebydesign",
+      "date": "2026-09-27",
+      "supports": "Source discovery only; an indexed primary extract describes manufacturer responsibility and secure defaults.",
+      "limits": "Hub returned 403; PDF retrieval failed, and partner PDF exceeded tool size. Do not claim full paper review or newest CISA edition. Use S07/S02 for supported principles.",
+      "status": "partial / access limited"
+    },
+    {
+      "id": "S07",
+      "title": "ASD Secure by Design foundations",
+      "edition": "July 2024 document; HTML last updated July 30 2024",
+      "url": "https://www.cyber.gov.au/business-government/secure-design/secure-by-design/secure-by-design-foundations",
+      "date": "2026-09-27",
+      "supports": "Security defaults and lifecycle ownership as design responsibilities.",
+      "limits": "Partner-government guidance, not a substitute for inaccessible CISA publication verification.",
+      "status": "read"
+    },
+    {
+      "id": "S08",
+      "title": "MDN Web Security",
+      "edition": "Rolling documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Security",
+      "date": "2026-09-27",
+      "supports": "Browser-facing controls: HTTPS, safer content handling, cookie restrictions and cross-origin boundaries.",
+      "limits": "Choose applicable controls; no operational environment or application has been audited.",
+      "status": "read"
+    },
+    {
+      "id": "S09",
+      "title": "Mozilla HTTP Observatory tests and scoring",
+      "edition": "Rolling documentation",
+      "url": "https://developer.mozilla.org/en-US/observatory/docs/tests_and_scoring",
+      "date": "2026-09-27",
+      "supports": "Browser-header checks and interpretation of their grades.",
+      "limits": "Grade is a signal, not proof of authorization, tenant separation or complete security; no remote scan was run.",
+      "status": "read"
+    },
+    {
+      "id": "S10",
+      "title": "Security disclosure file format",
+      "edition": "RFC 9116",
+      "url": "https://www.rfc-editor.org/rfc/rfc9116.html",
+      "date": "2026-09-27",
+      "supports": "A discoverable security contact with expiry, normally at /.well-known/security.txt over HTTPS.",
+      "limits": "Use a user-approved real contact; a placeholder contact is not a completed disclosure channel.",
+      "status": "read"
+    },
+    {
+      "id": "S11",
+      "title": "MDN CSP Report-Only",
+      "edition": "Rolling documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only",
+      "date": "2026-09-27",
+      "supports": "Trial a policy while observing violations before enforcement.",
+      "limits": "Report-Only does not block violations. External reporting destinations need separate data-sharing approval.",
+      "status": "read"
+    },
+    {
+      "id": "S12",
+      "title": "MDN Strict-Transport-Security",
+      "edition": "Rolling documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security",
+      "date": "2026-09-27",
+      "supports": "HSTS relies on an HTTPS response; subdomain scope and preload require care.",
+      "limits": "An HTTP localhost header check cannot prove HTTPS enforcement; do not casually add preload or includeSubDomains.",
+      "status": "read"
+    },
+    {
+      "id": "S13",
+      "title": "MDN CORS",
+      "edition": "Rolling documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+      "date": "2026-09-27",
+      "supports": "Credentialed browser access needs explicit allowed origins; public noncredentialed resources can allow all origins.",
+      "limits": "CORS controls browser response access, not caller authorization or all cross-site requests.",
+      "status": "read"
+    },
+    {
+      "id": "S14",
+      "title": "Electron security guidance",
+      "edition": "Rolling latest documentation; no app-version claim",
+      "url": "https://www.electronjs.org/docs/latest/tutorial/security",
+      "date": "2026-09-27",
+      "supports": "Renderer isolation, sandboxing, remote-content and privileged-bridge boundaries.",
+      "limits": "Only applicable to Electron; another desktop runtime needs its own official guidance.",
+      "status": "read"
+    },
+    {
+      "id": "S15",
+      "title": "MCP authorization specification",
+      "edition": "2026-07-28; latest specification redirected here",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+      "date": "2026-09-27",
+      "supports": "Validate access-token audience and use constrained authorization scopes.",
+      "limits": "Map controls to the detected transport and SDK version; reading docs does not authorize connector changes.",
+      "status": "read"
+    },
+    {
+      "id": "S16",
+      "title": "MCP security best practices",
+      "edition": "Draft documentation",
+      "url": "https://modelcontextprotocol.io/docs/draft/tutorials/security/security_best_practices",
+      "date": "2026-09-27",
+      "supports": "Threat discovery: confused deputy, unsafe token forwarding, SSRF and local-server execution.",
+      "limits": "Draft is supplementary; use S15 for stable normative authorization requirements.",
+      "status": "read"
+    },
+    {
+      "id": "S17",
+      "title": "Django deployment checklist",
+      "edition": "Stable redirect resolved to Django 6.1",
+      "url": "https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/",
+      "date": "2026-09-27",
+      "supports": "Check production debug settings, hosts and environment-specific deployment configuration.",
+      "limits": "Installed applications may use a different supported version; inspect their manifests first.",
+      "status": "read"
+    },
+    {
+      "id": "S18",
+      "title": "FastAPI behind a proxy",
+      "edition": "Rolling documentation",
+      "url": "https://fastapi.tiangolo.com/advanced/behind-a-proxy/",
+      "date": "2026-09-27",
+      "supports": "Forwarded headers should be accepted from known proxy addresses.",
+      "limits": "Trusting all sources is only appropriate under an enforced proxy-only network boundary; inspect topology.",
+      "status": "read"
+    },
+    {
+      "id": "S19",
+      "title": "EU General Data Protection Regulation",
+      "edition": "Regulation (EU) 2016/679",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+      "date": "2026-09-27",
+      "supports": "When applicable, data minimization, retention, security and an appropriate processing basis need attention.",
+      "limits": "No jurisdiction or lawful-basis determination made. Consent is not the only possible basis; legal decisions stay with the user and qualified advisers.",
+      "status": "read"
+    },
+    {
+      "id": "S20",
+      "title": "SLSA specification",
+      "edition": "1.2 / Approved",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "date": "2026-09-27",
+      "supports": "Current supply-chain framework with build/source tracks and provenance.",
+      "limits": "Supersedes P02 as this research baseline; provenance alone does not establish safe behavior or a SLSA level.",
+      "status": "read"
+    },
+    {
+      "id": "S21",
+      "title": "GitHub Actions secure use",
+      "edition": "Rolling documentation",
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "date": "2026-09-27",
+      "supports": "Least workflow privilege, handling untrusted event data safely, and full commit-SHA references for third-party actions.",
+      "limits": "An immutable action can still be unsafe; inspect source and update deliberately. Replaces unavailable P04.",
+      "status": "read"
+    },
+    {
+      "id": "S22",
+      "title": "GitHub repository-security quickstart",
+      "edition": "Rolling documentation",
+      "url": "https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository",
+      "date": "2026-09-27",
+      "supports": "Repository security-policy and security-feature setup pointers.",
+      "limits": "Plan availability and dashboard state are not verified from local files; user performs remote setup.",
+      "status": "read"
+    },
+    {
+      "id": "S23",
+      "title": "npm publishing 2FA requirements",
+      "edition": "Rolling documentation",
+      "url": "https://docs.npmjs.com/requiring-2fa-for-package-publishing-and-settings-modification/",
+      "date": "2026-09-27",
+      "supports": "Maintainer authentication and package publishing protections.",
+      "limits": "Account settings and publication remain user actions; recheck supported publishing paths before implementation.",
+      "status": "read"
+    },
+    {
+      "id": "S24",
+      "title": "MASVS release ledger",
+      "edition": "2.1.0 marked Latest",
+      "url": "https://github.com/OWASP/masvs/releases",
+      "date": "2026-09-27",
+      "supports": "Confirms stable mobile baseline including privacy controls.",
+      "limits": "O05 is live documentation; pin a release for precise requirements. Do not reuse old MASVS level labels uncritically.",
+      "status": "read"
+    },
+    {
+      "id": "S25",
+      "title": "MASTG release ledger",
+      "edition": "2.0.0 marked Latest; first stable v2 framework",
+      "url": "https://github.com/OWASP/mastg/releases",
+      "date": "2026-09-27",
+      "supports": "Confirms modular mobile test guidance and stable edition.",
+      "limits": "Use detected platform tools locally; missing device/emulator support must be reported.",
+      "status": "read"
+    },
+    {
+      "id": "S26",
+      "title": "ASVS usage and verification levels",
+      "edition": "Pinned v5.0.0",
+      "url": "https://raw.githubusercontent.com/OWASP/ASVS/v5.0.0/5.0/en/0x03-What-is-the-ASVS.md",
+      "date": "2026-09-27",
+      "supports": "L1 starts with essential defenses; L2 includes L1 and broader requirements; L3 adds the most demanding controls. Tailoring depends on application context.",
+      "limits": "A selected subset is ASVS-informed, not an ASVS certification. GitHub latest release alias also exposes bleeding-edge content; do not substitute it for v5.0.0.",
+      "status": "read"
+    },
+    {
+      "id": "S27",
+      "title": "Stripe idempotent requests",
+      "edition": "Rolling API documentation",
+      "url": "https://docs.stripe.com/api/idempotent_requests",
+      "date": "2026-09-27",
+      "supports": "Use an operation-specific key to make supported API retries return the recorded outcome.",
+      "limits": "API request idempotency is different from deduplicating incoming webhook events; payment edits require separate approval.",
+      "status": "read"
+    },
+    {
+      "id": "S28",
+      "title": "Supabase API key types",
+      "edition": "Rolling documentation",
+      "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+      "date": "2026-09-27",
+      "supports": "Distinguishes publishable/anon keys from privileged secret/service-role keys that bypass RLS.",
+      "limits": "Prefix presence is not proof of a leak. Assess privileges and RLS without displaying key values.",
+      "status": "read"
+    },
+    {
+      "id": "S29",
+      "title": "Firebase basic security rules",
+      "edition": "Rolling documentation",
+      "url": "https://firebase.google.com/docs/rules/basics",
+      "date": "2026-09-27",
+      "supports": "Tailor rules to authenticated users and the intended data access model rather than broad public access.",
+      "limits": "Product-specific rules differ; privileged server SDK paths also need server-side authorization.",
+      "status": "read"
+    },
+    {
+      "id": "S30",
+      "title": "Next.js environment variables",
+      "edition": "Rolling App Router guide; selector showed 16.3.6",
+      "url": "https://nextjs.org/docs/app/guides/environment-variables",
+      "date": "2026-09-27",
+      "supports": "Investigate NEXT_PUBLIC_ variables as browser-exposure candidates alongside build artifacts.",
+      "limits": "Prefix is a signal, not proof a value is confidential; use version-specific instructions for the target app.",
+      "status": "read"
+    },
+    {
+      "id": "S31",
+      "title": "Amazon S3 Block Public Access",
+      "edition": "Rolling service documentation",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html",
+      "date": "2026-09-27",
+      "supports": "Inspect account/bucket public-access controls and deliberate public-object requirements.",
+      "limits": "Local IaC is only desired state; dashboard and actual resource state remain unverified. No AWS calls made.",
+      "status": "read"
+    },
+    {
+      "id": "S32",
+      "title": "Vercel Deployment Protection",
+      "edition": "Rolling product documentation",
+      "url": "https://vercel.com/docs/deployment-protection",
+      "date": "2026-09-27",
+      "supports": "Conditional review of preview/deployment access boundaries.",
+      "limits": "Do not assume features are included in a plan or that platform protection replaces app authorization.",
+      "status": "read"
+    },
+    {
+      "id": "S33",
+      "title": "Cloudflare security guidance",
+      "edition": "Rolling documentation",
+      "url": "https://developers.cloudflare.com/fundamentals/security/",
+      "date": "2026-09-27",
+      "supports": "Conditional provider-security documentation entry point.",
+      "limits": "No account, origin lock-down or plan-specific settings verified; select implementation pages only when Cloudflare is detected.",
+      "status": "read"
+    },
+    {
+      "id": "S34",
+      "title": "Auth0 production-deployment guidance",
+      "edition": "Unconfirmed",
+      "url": "https://auth0.com/docs/deploy-monitor/deploy-applications/deploy-to-production",
+      "date": "2026-09-27",
+      "supports": "Conditional identity-provider pointer only.",
+      "limits": "Retrieval failed. No Auth0-specific checklist rule is derived; fetch current docs when provider is present.",
+      "status": "unavailable"
+    },
+    {
+      "id": "R01",
+      "title": "PortSwigger access-control guidance",
+      "edition": "Unversioned practitioner material",
+      "url": "https://portswigger.net/web-security/access-control",
+      "date": "2026-09-27",
+      "supports": "Use resource-level authorization tests, including role and cross-user boundaries.",
+      "limits": "Practitioner evidence, corroborated by O03/O16/S26; no lab or attack was executed.",
+      "status": "read"
+    },
+    {
+      "id": "R02",
+      "title": "Trail of Bits Testing Handbook",
+      "edition": "Rolling practitioner handbook",
+      "url": "https://appsec.guide/",
+      "date": "2026-09-27",
+      "supports": "Choose deterministic analysis suited to the language and risk.",
+      "limits": "Tool discovery, not permission to install tools or run arbitrary rule downloads; corroborated by S02.",
+      "status": "read"
+    },
+    {
+      "id": "R03",
+      "title": "Troy Hunt: Passwords Evolved",
+      "edition": "Historical practitioner article",
+      "url": "https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/",
+      "date": "2026-09-27",
+      "supports": "Helpful explanation of credential reuse and usable authentication.",
+      "limits": "Do not inherit old numeric policy; use S04/S05/O09 for current requirements.",
+      "status": "read"
+    },
+    {
+      "id": "R04",
+      "title": "Tanya Janca: Resources",
+      "edition": "Unversioned practitioner material",
+      "url": "https://shehackspurple.ca/resources/",
+      "date": "2026-09-27",
+      "supports": "Accessible teaching style for developers without a security background.",
+      "limits": "No technical control imported from the landing page. Linked securecodingguideline.com could not be retrieved.",
+      "status": "read"
+    },
+    {
+      "id": "R05",
+      "title": "Jim Manico: Talks and workshops",
+      "edition": "Page states last update May 13 2026",
+      "url": "https://manicode.com/talks.html",
+      "date": "2026-09-27",
+      "supports": "Coverage signal for secure coding, frontend boundaries, dependencies and AI/MCP.",
+      "limits": "Talk descriptions are not standards or verified talk transcripts; checklist authority remains OWASP/NIST.",
+      "status": "read"
+    },
+    {
+      "id": "R06",
+      "title": "Latacora: Cryptographic right answers",
+      "edition": "Historical 2018 practitioner article",
+      "url": "https://www.latacora.com/blog/cryptographic-right-answers/",
+      "date": "2026-09-27",
+      "supports": "Prefer established cryptographic constructions and proper password hashing.",
+      "limits": "Use current O09/S05 guidance; do not carry over historical preference ordering or custom crypto recipes.",
+      "status": "read"
+    },
+    {
+      "id": "N01",
+      "title": "Turnstile server-side validation",
+      "url": "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/",
+      "edition": "Rolling documentation",
+      "date": "2026-09-27",
+      "supports": "A challenge must be validated on the server before its protected action.",
+      "limits": "Conditional example; no provider purchase or live call authorized.",
+      "status": "read"
+    },
+    {
+      "id": "N02",
+      "title": "Cloudflare DDoS Protection",
+      "url": "https://developers.cloudflare.com/ddos-protection/",
+      "edition": "Rolling documentation",
+      "date": "2026-09-27",
+      "supports": "An edge service can absorb some network/HTTP abuse before origin handling.",
+      "limits": "Not a replacement for origin authorization, application budgets or verifying proxy topology.",
+      "status": "read"
+    },
+    {
+      "id": "N03",
+      "title": "OWASP Unvalidated Redirects and Forwards",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+      "edition": "Rolling documentation",
+      "date": "2026-09-27",
+      "supports": "Restrict user-controlled redirect destinations.",
+      "limits": "Validate the actual framework URL parsing and intended redirect flow.",
+      "status": "read"
+    },
+    {
+      "id": "N04",
+      "title": "Sender Policy Framework",
+      "url": "https://www.rfc-editor.org/rfc/rfc7208",
+      "edition": "RFC 7208",
+      "date": "2026-09-27",
+      "supports": "Domain policy identifies permitted sending systems.",
+      "limits": "RFC 7208 is a referenced standard, not a claim that no updates exist; actual DNS is user-owned.",
+      "status": "read"
+    },
+    {
+      "id": "N05",
+      "title": "DKIM Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc6376",
+      "edition": "RFC 6376",
+      "date": "2026-09-27",
+      "supports": "Domain signatures support message authentication.",
+      "limits": "Private signing keys are not inspected; provider-specific DNS and later amendments must be checked.",
+      "status": "read"
+    },
+    {
+      "id": "N06",
+      "title": "DMARC",
+      "url": "https://www.rfc-editor.org/rfc/rfc7489",
+      "edition": "RFC 7489",
+      "date": "2026-09-27",
+      "supports": "Align domain authentication and publish receiver-handling/reporting policy.",
+      "limits": "Foundational RFC; check current amendments/provider support before final DNS instructions. Monitoring is not enforcement.",
+      "status": "read"
+    },
+    {
+      "id": "N07",
+      "title": "Dependabot version updates",
+      "url": "https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates",
+      "edition": "Rolling documentation",
+      "date": "2026-09-27",
+      "supports": "Schedule dependency update pull requests for configured ecosystems.",
+      "limits": "Not automatic safe merging; remote enablement and privileged CI require user action.",
+      "status": "read"
+    }
+  ],
+  "local_skills": [
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\security-and-hardening\\SKILL.md",
+      "status": "read",
+      "useful": "Separate always-do, ask-first, and never-do changes; identify trust boundaries before selecting controls.",
+      "do_not_copy": "Do not reuse its prose, code samples, control lists, or exact decision wording."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\conducting-api-security-testing\\SKILL.md",
+      "status": "read",
+      "useful": "API test framing and authorization-safe testing boundaries.",
+      "do_not_copy": "Do not reuse its procedures, payloads, commands, or prose."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\hardening-docker-containers-for-production\\SKILL.md",
+      "status": "read",
+      "useful": "Container hardening scope and configuration review prompts.",
+      "do_not_copy": "Do not reuse its benchmark mappings, commands, or prose."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\detecting-indirect-prompt-injection\\SKILL.md",
+      "status": "read",
+      "useful": "Treat retrieved documents and other indirect content as untrusted before model ingestion.",
+      "do_not_copy": "Do not reuse its pipeline, detector selections, validation criteria, or prose."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\detecting-ai-model-prompt-injection-attacks\\SKILL.md",
+      "status": "read",
+      "useful": "Defense-in-depth framing for direct and indirect prompt injection.",
+      "do_not_copy": "Do not reuse its install instructions, detector parameters, code, or prose."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\auditing-mcp-servers-for-tool-poisoning\\SKILL.md",
+      "status": "read",
+      "useful": "MCP-specific focus on untrusted tool metadata, permissions, authentication, SSRF, and change detection.",
+      "do_not_copy": "Do not reuse its scanner workflow, probes, commands, mappings, or prose."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\detecting-supply-chain-attacks-in-ci-cd\\SKILL.md",
+      "status": "read",
+      "useful": "Workflow inventory: unpinned actions, expression-to-shell flow, excess token access, third-party write access, and dependency confusion.",
+      "do_not_copy": "Do not copy its scripts, examples, threat labels, or scanner workflow."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\detecting-malicious-npm-packages\\SKILL.md",
+      "status": "read",
+      "useful": "Treat package lifecycle scripts and package acquisition as potentially executable; prefer static inspection and isolation for any malware triage.",
+      "do_not_copy": "Do not copy its lengthy procedure, commands, examples, or unverified campaign claims."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\detecting-dependency-confusion\\SKILL.md",
+      "status": "read",
+      "useful": "Check internal package naming and registry-source restrictions when a project mixes public and private registries.",
+      "do_not_copy": "Do not copy its testing tools, implementation instructions, examples, or historical claims."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\aws-security\\SKILL.md",
+      "status": "read",
+      "useful": "Keep cloud inspection read-only, avoid unsupported conclusions, and summarize sensitive findings.",
+      "do_not_copy": "Do not copy its service-routing rules or operational API instructions."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\auditing-cloud-with-cis-benchmarks\\SKILL.md",
+      "status": "read",
+      "useful": "A cloud module should distinguish a posture review from application testing and require authorized scope.",
+      "do_not_copy": "Do not copy benchmark mappings, vendor tooling instructions, claims, or remediation timelines."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.claude\\skills\\conducting-gdpr-compliance-assessment\\SKILL.md",
+      "status": "read",
+      "useful": "When personal data is in scope, inventory data purposes, retention, processors, and rights as a separate user-owned launch track.",
+      "do_not_copy": "Do not copy legal interpretations, regional claims, templates, calculations, or procedural text."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.codex\\skills\\security-ownership-map\\SKILL.md",
+      "status": "read by owner; not executed",
+      "useful": "Optional ownership-maintenance context for larger repos.",
+      "do_not_copy": "No mandatory graph analysis, dependency installation or bus-factor claims for a small launch pass."
+    },
+    {
+      "path": "C:\\Users\\aarav\\.agents\\skills\\security-and-hardening\\SKILL.md",
+      "status": "read by owner; explicitly invoked",
+      "useful": "Trust-boundary inventory, conditional checks, evidence and permission distinctions.",
+      "do_not_copy": "No verbatim prose/code, fixed bcrypt cost as universal policy, automatic CSP enforcement, secret-printing grep, blanket wildcard-CORS accusations, universal consent claims, or unsupported statistics."
+    }
+  ],
+  "controls": [
+    {
+      "id": "B01",
+      "item": "Know what is exposed and what data is held",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Every project",
+      "priority": "Before launch",
+      "owner": "Agent proposes; user confirms unknowns",
+      "implementation": "Inspect manifests, entry points, CI and data paths without opening secret values.",
+      "verification": "Cite evidence for each selected profile and module; record unknowns.",
+      "sources": [
+        "S02",
+        "S08",
+        "S26"
+      ],
+      "why": "A short inventory keeps irrelevant advice out of the launch list.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "B02",
+      "item": "Keep confidential values out of shipped files",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Build, source and release material",
+      "priority": "Before launch",
+      "owner": "Agent redacted checks; user rotates",
+      "implementation": "Inspect references to credentials; allowlist placeholders and documented public keys.",
+      "verification": "Redacted local scan plus built-artifact check; no online key validation.",
+      "sources": [
+        "O14",
+        "S28",
+        "S30",
+        "P18"
+      ],
+      "why": "Privileged values in public files can grant access immediately.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "B03",
+      "item": "Keep builds repeatable and dependencies understood",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Where dependencies/build tools exist",
+      "priority": "First week",
+      "owner": "Agent after plan",
+      "implementation": "Identify authoritative package manager/lock boundary; inspect scripts before execution.",
+      "verification": "Locked build/audit where installed and permitted; absent tools stay NOT RUN.",
+      "sources": [
+        "P03",
+        "P01",
+        "S02"
+      ],
+      "why": "Repeatable inputs make updates and advisory findings easier to assess.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "B04",
+      "item": "Choose a clear security contact",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Public distribution or reachable service",
+      "priority": "First week",
+      "owner": "User supplies contact; agent writes",
+      "implementation": "Draft SECURITY.md; add security.txt for a web origin when relevant.",
+      "verification": "Check usable approved contact and expiry format; no live submission.",
+      "sources": [
+        "S10",
+        "S22"
+      ],
+      "why": "A working contact lets people report a problem privately.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "B05",
+      "item": "Record what was checked and what remains",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Every project",
+      "priority": "Before launch",
+      "owner": "Agent",
+      "implementation": "Separate planned action from observed behavior and unavailable environment evidence.",
+      "verification": "Each claimed pass has command, exit result and bounded evidence.",
+      "sources": [
+        "S02",
+        "S26"
+      ],
+      "why": "Clear evidence prevents an unchecked setting from looking finished.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "W01",
+      "item": "Serve browser traffic securely",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "HTTP surface; relevant client backend",
+      "priority": "Before launch",
+      "owner": "Agent config; user hosting",
+      "implementation": "Review HTTPS termination and scoped HSTS, then provider handoff.",
+      "verification": "Local TLS/config check only; HTTP localhost cannot prove deployed HSTS.",
+      "sources": [
+        "S08",
+        "S12",
+        "O22"
+      ],
+      "why": "Encrypted transport protects data on its way to the service.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "W02",
+      "item": "Set baseline browser response headers",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "HTTP responses",
+      "priority": "Before launch",
+      "owner": "Agent after plan; ask for enforcement",
+      "implementation": "Choose content-type, framing and referrer controls that fit the app. CSP rollout is W06, not a required day-one enforcement project.",
+      "verification": "Inspect local responses and browser console; label Report-Only as monitoring.",
+      "sources": [
+        "O22",
+        "S09",
+        "S11"
+      ],
+      "why": "Browser defaults can be tightened without redesigning the app.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "W03",
+      "item": "Allow only intended cross-origin access",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "Cross-origin browser clients",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Separate private credentialed APIs from intentionally public resources.",
+      "verification": "Allowed and denied origin preflights; normal same-origin flow still works.",
+      "sources": [
+        "S13",
+        "O16"
+      ],
+      "why": "Only intended browser origins should read private responses.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "W04",
+      "item": "Prevent cross-site state changes",
+      "profiles": [
+        "W",
+        "I"
+      ],
+      "when": "Ambient browser credentials and write operations",
+      "priority": "Before launch",
+      "owner": "Agent proposes; ask if session semantics change",
+      "implementation": "Use framework CSRF controls and appropriate cookie/Origin policy.",
+      "verification": "Missing/invalid CSRF proof fails; valid same-user request succeeds.",
+      "sources": [
+        "O11",
+        "O08"
+      ],
+      "why": "A signed-in browser can otherwise submit an unwanted action from another site.",
+      "reference_file": "modules/sessions.md"
+    },
+    {
+      "id": "W05",
+      "item": "Show useful errors without debug internals",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "Server functions or production build",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Disable production debug; define safe failure responses.",
+      "verification": "Local production-mode error exposes no stack/credential data.",
+      "sources": [
+        "O18",
+        "O19",
+        "S17"
+      ],
+      "why": "Debug output may reveal implementation and user data.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "A01",
+      "item": "Protect accounts and administrative actions",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Private routes or management features",
+      "priority": "Before launch",
+      "owner": "Ask per auth/session item",
+      "implementation": "Check server-side authentication plus role/resource authorization.",
+      "verification": "Signed-out request is denied; ordinary user cannot use admin action.",
+      "sources": [
+        "O07",
+        "O03",
+        "R01",
+        "S26"
+      ],
+      "why": "Knowing who signed in is different from checking what they may do.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "A02",
+      "item": "Use appropriate password and recovery controls",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Project owns password authentication",
+      "priority": "Before launch",
+      "owner": "Ask per item",
+      "implementation": "Use current hash/policy guidance and bounded recovery flow; prefer maintained identity components.",
+      "verification": "Local policy/hash/recovery tests with fake accounts; no real-user resets.",
+      "sources": [
+        "S04",
+        "S05",
+        "O09",
+        "O07"
+      ],
+      "why": "Credential storage and recovery are common paths into accounts.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "A03",
+      "item": "Keep sessions scoped and revocable",
+      "profiles": [
+        "W",
+        "I"
+      ],
+      "when": "Session cookies or persistent login",
+      "priority": "Before launch",
+      "owner": "Ask per semantic change",
+      "implementation": "Review cookie scope, flags, expiry and rotation without breaking expected login flows.",
+      "verification": "Inspect synthetic Set-Cookie flags and local logout/expiry behavior.",
+      "sources": [
+        "O08",
+        "S08"
+      ],
+      "why": "Session scope and expiry limit how long stolen sessions remain useful.",
+      "reference_file": "modules/sessions.md"
+    },
+    {
+      "id": "A04",
+      "item": "Bound login and recovery attempts",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Public auth endpoints",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Apply endpoint/account-aware budgets without enabling trivial account lockout.",
+      "verification": "Bounded valid/invalid request sequence hits limit; unrelated local account can still authenticate.",
+      "sources": [
+        "O07",
+        "O03",
+        "P19"
+      ],
+      "why": "Repeated guesses and reset attempts should have a practical ceiling.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "A05",
+      "item": "Keep tenant and user records separated",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Multi-user or multi-tenant records",
+      "priority": "Before launch",
+      "owner": "Ask if auth, schema or policy changes",
+      "implementation": "Derive tenant scope from verified identity and enforce on every read/write path.",
+      "verification": "Two seeded tenants: cross-tenant access denied, same-tenant access succeeds.",
+      "sources": [
+        "O03",
+        "R01",
+        "S26"
+      ],
+      "why": "One customer must not read or change another customer’s records.",
+      "reference_file": "modules/multi-tenant.md"
+    },
+    {
+      "id": "A06",
+      "item": "Protect Supabase tables, views and privileged access",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Supabase detected",
+      "priority": "Before launch",
+      "owner": "Ask per database/policy item",
+      "implementation": "Review grants/RLS and elevated key paths; avoid broad replacement policies.",
+      "verification": "Local nonprivileged users cannot cross tenants; privileged bypass paths audited separately.",
+      "sources": [
+        "P08",
+        "S28"
+      ],
+      "why": "Database policies protect browser-facing data even when a client calls the API directly.",
+      "reference_file": "modules/multi-tenant.md"
+    },
+    {
+      "id": "A07",
+      "item": "Limit Firebase access to the intended users",
+      "profiles": [
+        "W",
+        "A",
+        "M",
+        "I"
+      ],
+      "when": "Firebase data/storage products detected",
+      "priority": "Before launch",
+      "owner": "Ask per data-policy item",
+      "implementation": "Review product-specific rules and server SDK authorization.",
+      "verification": "Emulator tests deny anonymous and cross-user access while allowing intended access.",
+      "sources": [
+        "P09",
+        "S29"
+      ],
+      "why": "Broad rules can expose records without going through the app interface.",
+      "reference_file": "modules/multi-tenant.md"
+    },
+    {
+      "id": "A08",
+      "item": "Use the identity provider safely",
+      "profiles": [
+        "W",
+        "A",
+        "M",
+        "D",
+        "I"
+      ],
+      "when": "Managed auth detected",
+      "priority": "Before launch",
+      "owner": "User dashboard; ask per code item",
+      "implementation": "Read the actual provider/version docs for redirect, token and session settings.",
+      "verification": "Local token/redirect mocks; dashboard configuration remains unverified.",
+      "sources": [
+        "O07",
+        "S04",
+        "S34"
+      ],
+      "why": "A managed provider still needs the right application boundaries.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "I01",
+      "item": "Validate input and encode output",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Untrusted input or rendered content",
+      "priority": "Before launch",
+      "owner": "Agent after plan; ask if public contract changes",
+      "implementation": "Use existing schemas, parameterized storage and context-appropriate encoding.",
+      "verification": "Malformed input denied; stored/displayed untrusted data stays inert.",
+      "sources": [
+        "O10",
+        "O16",
+        "S01"
+      ],
+      "why": "Untrusted values should not become commands, queries or executable markup.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "I02",
+      "item": "Bound work, payloads and waiting time",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Network or expensive operations",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Limit body/file size, request duration and concurrency based on actual workloads.",
+      "verification": "Small bounded local probes verify rejection and timeout without load testing.",
+      "sources": [
+        "O03",
+        "O18",
+        "O17"
+      ],
+      "why": "Small bounded requests should not trigger unlimited work.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "I03",
+      "item": "Trust forwarded addresses only through known proxies",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Reverse proxy/CDN detected",
+      "priority": "Before launch",
+      "owner": "Agent app settings; ask for network/IaC",
+      "implementation": "Model the allowed hop chain; do not trust arbitrary X-Forwarded-For.",
+      "verification": "Direct spoofed header cannot evade local limiter; approved proxy path preserves identity.",
+      "sources": [
+        "P19",
+        "S18"
+      ],
+      "why": "An attacker-supplied address must not become a fresh rate-limit identity.",
+      "reference_file": "modules/proxy-and-cdn.md"
+    },
+    {
+      "id": "I04",
+      "item": "Accept uploads without granting execution",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Uploads or archive import",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Bound size/type/path, rename safely, store outside executable/public paths unless deliberate.",
+      "verification": "Fake files, misleading extensions and traversal names denied; valid fixture accepted.",
+      "sources": [
+        "O13",
+        "O10"
+      ],
+      "why": "An uploaded file should remain data rather than execute or overwrite files.",
+      "reference_file": "modules/uploads.md"
+    },
+    {
+      "id": "I05",
+      "item": "Keep URL fetches inside their intended destinations",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "URL import, previews, callbacks or discovery",
+      "priority": "Before launch",
+      "owner": "Agent after plan; ask for infra changes",
+      "implementation": "Restrict scheme/host/address and redirects; account for DNS re-resolution.",
+      "verification": "Mock resolver/HTTP client rejects private/metadata destinations; no real target probing.",
+      "sources": [
+        "O12",
+        "S16"
+      ],
+      "why": "A public URL field must not become access to private network services.",
+      "reference_file": "modules/agent-tools.md"
+    },
+    {
+      "id": "I06",
+      "item": "Keep sensitive records out of logs",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Logging/telemetry exists",
+      "priority": "First week",
+      "owner": "Agent after plan",
+      "implementation": "Redact at logging boundaries and retain only useful diagnostic fields.",
+      "verification": "Synthetic markers absent from captured local logs; no live secrets logged.",
+      "sources": [
+        "O15",
+        "O14"
+      ],
+      "why": "Diagnostics should remain useful without collecting confidential content.",
+      "reference_file": "modules/privacy.md"
+    },
+    {
+      "id": "I07",
+      "item": "Bound GraphQL and API resource access",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "GraphQL or rich API queries",
+      "priority": "As you grow",
+      "owner": "Agent after plan; contract changes ask-first",
+      "implementation": "Review depth/complexity/pagination and field-level authorization as applicable.",
+      "verification": "Oversized synthetic query denied; authorized bounded query succeeds.",
+      "sources": [
+        "O17",
+        "O03"
+      ],
+      "why": "A valid query can still request excessive or unauthorized data.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "P01",
+      "item": "Verify incoming payment events",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Payment webhooks",
+      "priority": "Before launch",
+      "owner": "Ask per payment item",
+      "implementation": "Use provider SDK raw-body signature validation before side effects.",
+      "verification": "Local signed fixture accepted; altered body/signature rejected. No Stripe calls.",
+      "sources": [
+        "P15",
+        "O16"
+      ],
+      "why": "Only authentic provider events should change payment state.",
+      "reference_file": "modules/payments.md"
+    },
+    {
+      "id": "P02",
+      "item": "Avoid processing the same payment twice",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Payment requests and event retries",
+      "priority": "Before launch",
+      "owner": "Ask per payment/schema item",
+      "implementation": "Separate outgoing idempotency keys from incoming event deduplication.",
+      "verification": "Repeat local event/request fixture produces one intended effect.",
+      "sources": [
+        "S27",
+        "P15"
+      ],
+      "why": "Retries should not create duplicate payment effects.",
+      "reference_file": "modules/payments.md"
+    },
+    {
+      "id": "P03",
+      "item": "Authenticate other incoming webhooks",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Nonpayment webhooks",
+      "priority": "Before launch",
+      "owner": "Agent after plan; new auth scheme ask-first",
+      "implementation": "Follow the provider signature/replay contract and validate payloads.",
+      "verification": "Forged and replayed local messages denied; valid message succeeds.",
+      "sources": [
+        "O16",
+        "O10"
+      ],
+      "why": "External events need a verifiable sender and bounded processing.",
+      "reference_file": "modules/webhooks.md"
+    },
+    {
+      "id": "C01",
+      "item": "Make storage exposure deliberate",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Cloud/object storage detected",
+      "priority": "Before launch",
+      "owner": "User dashboard; ask per IaC item",
+      "implementation": "Separate intended public assets from private objects, policies and signed access.",
+      "verification": "Local config/policy tests; actual bucket state remains user-owned/unverified.",
+      "sources": [
+        "S31",
+        "P13",
+        "O01"
+      ],
+      "why": "Private files should stay private even when their URLs are guessed.",
+      "reference_file": "modules/cloud.md"
+    },
+    {
+      "id": "C02",
+      "item": "Protect preview and management surfaces",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "Hosted previews/admin consoles",
+      "priority": "Before launch",
+      "owner": "User provider settings",
+      "implementation": "Select Vercel/Netlify/Cloudflare/AWS controls only for the detected host.",
+      "verification": "Read config evidence and provide exact user verification steps; no remote probes.",
+      "sources": [
+        "S32",
+        "S33",
+        "P11",
+        "P13"
+      ],
+      "why": "Preview and management surfaces may expose unfinished or internal functions.",
+      "reference_file": "modules/cloud.md"
+    },
+    {
+      "id": "C03",
+      "item": "Give containers only needed privileges",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "L",
+        "I"
+      ],
+      "when": "Container runtime/build detected",
+      "priority": "Before launch",
+      "owner": "Ask per infrastructure item",
+      "implementation": "Review user, capabilities, mounts, secret handling and image provenance.",
+      "verification": "Static config checks and approved local container checks; no production access.",
+      "sources": [
+        "O20",
+        "P03"
+      ],
+      "why": "A container compromise should have as little reach as possible.",
+      "reference_file": "modules/containers.md"
+    },
+    {
+      "id": "C04",
+      "item": "Keep Kubernetes identities and workloads scoped",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Kubernetes manifests detected",
+      "priority": "As you grow",
+      "owner": "Ask per IaC item; user applies",
+      "implementation": "Review RBAC, pod privilege, network boundaries and secret references.",
+      "verification": "Offline manifest checks; no cluster remediation or live scanning.",
+      "sources": [
+        "O21"
+      ],
+      "why": "Cluster-wide permissions can turn a small workload issue into a larger one.",
+      "reference_file": "modules/containers.md"
+    },
+    {
+      "id": "AI01",
+      "item": "Keep model credentials on the server",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "M",
+        "D",
+        "I"
+      ],
+      "when": "Hosted model calls",
+      "priority": "Before launch",
+      "owner": "Agent code after plan; user rotates",
+      "implementation": "Remove privileged model keys from client build paths; protect the server endpoint.",
+      "verification": "Fresh client build contains no synthetic secret marker; no paid model call.",
+      "sources": [
+        "O04",
+        "S30",
+        "P18",
+        "O14"
+      ],
+      "why": "A browser bundle cannot keep a model-provider secret confidential.",
+      "reference_file": "modules/ai-features.md"
+    },
+    {
+      "id": "AI02",
+      "item": "Put a ceiling on AI spending and loops",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "AI or other costly endpoints",
+      "priority": "Before launch",
+      "owner": "Agent after plan",
+      "implementation": "Use authenticated-user limits plus request/token/tool-loop caps and proxy-aware network budgets.",
+      "verification": "Mock model; user limit reaches 429 without provider spend or cross-user blocking.",
+      "sources": [
+        "O04",
+        "O03",
+        "P19"
+      ],
+      "why": "A request or agent loop should not create an unbounded bill.",
+      "reference_file": "modules/ai-features.md"
+    },
+    {
+      "id": "AI03",
+      "item": "Treat retrieved text and generated output as data",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "M",
+        "D",
+        "I"
+      ],
+      "when": "LLM input/output, RAG or agent tools",
+      "priority": "Before launch",
+      "owner": "Agent after plan; permission expansion never implicit",
+      "implementation": "Separate instruction authority from content; validate output and tool arguments outside the prompt.",
+      "verification": "Local adversarial document cannot cause unauthorized tool effects; log only safe evidence.",
+      "sources": [
+        "O04",
+        "O10",
+        "S16"
+      ],
+      "why": "Retrieved text and model output are not permission to execute actions.",
+      "reference_file": "modules/ai-features.md"
+    },
+    {
+      "id": "AI04",
+      "item": "Keep retrieval and tool access within each user scope",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "RAG, connectors or agent execution",
+      "priority": "Before launch",
+      "owner": "Ask per access/policy item",
+      "implementation": "Enforce tenant filters and scoped credentials at retrieval/tool boundaries.",
+      "verification": "Two fake identities cannot retrieve each other’s records or invoke disallowed tools.",
+      "sources": [
+        "O04",
+        "O03",
+        "S15"
+      ],
+      "why": "Tools and retrieval need the same user boundaries as the underlying data.",
+      "reference_file": "modules/ai-features.md"
+    },
+    {
+      "id": "G01",
+      "item": "Review skill commands and permission boundaries",
+      "profiles": [
+        "G"
+      ],
+      "when": "Agent instructions, scripts and referenced resources",
+      "priority": "Before launch",
+      "owner": "Agent reviews; user approves external actions",
+      "implementation": "Inventory executable paths, network calls, file scope and untrusted instruction entry points.",
+      "verification": "Static trace plus later isolated fixture; fetched text cannot authorize commands.",
+      "sources": [
+        "O04",
+        "S16",
+        "S21"
+      ],
+      "why": "Instructions and helper commands should not silently expand their host permissions.",
+      "reference_file": "modules/agent-tools.md"
+    },
+    {
+      "id": "G02",
+      "item": "Validate MCP authorization and transport boundaries",
+      "profiles": [
+        "G"
+      ],
+      "when": "MCP server/client",
+      "priority": "As you grow",
+      "owner": "Ask per auth/access item",
+      "implementation": "Match transport/version; validate token audience, consent and minimal permissions.",
+      "verification": "Local invalid-audience and unauthorized-tool fixtures fail without external OAuth calls.",
+      "sources": [
+        "S15",
+        "S16",
+        "O03"
+      ],
+      "why": "A token intended for one service should not authorize another.",
+      "reference_file": "modules/agent-tools.md"
+    },
+    {
+      "id": "M01",
+      "item": "Protect mobile storage and platform entry points",
+      "profiles": [
+        "M"
+      ],
+      "when": "Native mobile app",
+      "priority": "Before launch",
+      "owner": "Agent proposes; ask per permissions/auth item",
+      "implementation": "Select current MASVS/MASTG controls for local storage, links, IPC, permissions and network use.",
+      "verification": "Use available simulator/device fixtures; unavailable platform tests explicitly NOT RUN.",
+      "sources": [
+        "O05",
+        "O06",
+        "S24",
+        "S25"
+      ],
+      "why": "Mobile data and entry points need platform-specific boundaries.",
+      "reference_file": "modules/native-apps.md"
+    },
+    {
+      "id": "D01",
+      "item": "Separate desktop content from OS privileges",
+      "profiles": [
+        "D"
+      ],
+      "when": "Desktop app; Electron when detected",
+      "priority": "Before launch",
+      "owner": "Ask per privilege/auth item",
+      "implementation": "Review sandbox/renderer isolation, IPC validation and navigation boundaries.",
+      "verification": "Local renderer cannot invoke an unapproved privileged operation.",
+      "sources": [
+        "S14",
+        "O10"
+      ],
+      "why": "Untrusted desktop content should not inherit operating-system privileges.",
+      "reference_file": "modules/native-apps.md"
+    },
+    {
+      "id": "SC01",
+      "item": "Pin and constrain CI execution",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "CI workflows",
+      "priority": "First week",
+      "owner": "Agent file edits after plan; remote permissions user",
+      "implementation": "Review full SHA action references, untrusted PR inputs and least token permission.",
+      "verification": "Static workflow assertions; no real publish/deploy job run.",
+      "sources": [
+        "S21",
+        "P01"
+      ],
+      "why": "A workflow dependency or pull-request title should not take control of CI.",
+      "reference_file": "modules/supply-chain.md"
+    },
+    {
+      "id": "SC02",
+      "item": "Keep private packages tied to their registry",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Mixed private/public packages",
+      "priority": "First week",
+      "owner": "Agent proposes; registry settings user",
+      "implementation": "Inspect package scope, resolver sources and lockfile integrity without reading tokens.",
+      "verification": "Offline configuration checks; never publish or probe a collision package.",
+      "sources": [
+        "P03",
+        "P01"
+      ],
+      "why": "A public package with the same name should not replace a private dependency.",
+      "reference_file": "modules/supply-chain.md"
+    },
+    {
+      "id": "SC03",
+      "item": "Protect package publishing identities",
+      "profiles": [
+        "L",
+        "G"
+      ],
+      "when": "Published packages or distributed tooling",
+      "priority": "First week",
+      "owner": "User registry/dashboard; ask per CI identity change",
+      "implementation": "Use supported 2FA/trusted publisher workflows and minimal credentials.",
+      "verification": "Review local workflow contract; registry configuration remains unverified until user confirms.",
+      "sources": [
+        "P06",
+        "P07",
+        "S23"
+      ],
+      "why": "Publishing access can change every downstream installation.",
+      "reference_file": "modules/supply-chain.md"
+    },
+    {
+      "id": "SC04",
+      "item": "Trace released artifacts to their source",
+      "profiles": [
+        "L",
+        "G",
+        "M",
+        "D"
+      ],
+      "when": "Distributed releases",
+      "priority": "As you grow",
+      "owner": "Agent proposes; user publishes",
+      "implementation": "Record release provenance and integrity metadata where supported.",
+      "verification": "Verify local artifact digests/attestations if present; absence is not proof of malware.",
+      "sources": [
+        "S20",
+        "P01",
+        "P03"
+      ],
+      "why": "Traceable artifacts make unexpected changes easier to investigate.",
+      "reference_file": "modules/supply-chain.md"
+    },
+    {
+      "id": "PR01",
+      "item": "Collect and retain only needed personal data",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Personal or sensitive data",
+      "priority": "Before launch",
+      "owner": "User legal/data decisions; ask per schema item",
+      "implementation": "Inventory purpose, processors, retention and applicable rights; do not assume consent is always the basis.",
+      "verification": "Synthetic export/delete checks only after approved data-model scope.",
+      "sources": [
+        "S19",
+        "S24",
+        "O15"
+      ],
+      "why": "Keeping less personal data reduces what must be protected and managed.",
+      "reference_file": "modules/privacy.md"
+    },
+    {
+      "id": "OP01",
+      "item": "Plan recovery and watch for failed protections",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "M",
+        "D",
+        "I"
+      ],
+      "when": "Stateful service or app operations",
+      "priority": "First week",
+      "owner": "User operations; agent documented checks",
+      "implementation": "Assign incident contact, backup/restore responsibility and useful security-event monitoring.",
+      "verification": "Approved local restore exercise where available; distinguish plan from tested recovery.",
+      "sources": [
+        "S02",
+        "O15"
+      ],
+      "why": "A documented response and recovery path helps when something goes wrong.",
+      "reference_file": "modules/operations.md"
+    },
+    {
+      "id": "OP02",
+      "item": "Revisit sources and deeper assurance as the app grows",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "New integrations, data classes or scale",
+      "priority": "As you grow",
+      "owner": "User selects depth; agent reclassifies",
+      "implementation": "Refresh source editions and module choices; escalate high-assurance work beyond this skill.",
+      "verification": "Changed project facts trigger new applicable checks; never re-use old passes as fresh evidence.",
+      "sources": [
+        "S02",
+        "S26",
+        "S20"
+      ],
+      "why": "New features can make an earlier checklist incomplete.",
+      "reference_file": "modules/operations.md"
+    },
+    {
+      "id": "W06",
+      "item": "Roll out a Content Security Policy",
+      "profiles": [
+        "W",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "Browser content with scripts/resources",
+      "priority": "First week",
+      "owner": "Agent proposes Report-Only; ask separately before enforcement",
+      "implementation": "Inventory required resource origins; retain existing enforcement and introduce Report-Only only for a new policy. Keep reports local unless data sharing is approved.",
+      "verification": "A local synthetic violation is observed; expected pages work. Report-Only is never counted as blocked execution.",
+      "sources": [
+        "S11",
+        "O22"
+      ],
+      "why": "A measured rollout can restrict unwanted scripts without breaking real workflows.",
+      "reference_file": "modules/web-platform.md"
+    },
+    {
+      "id": "A09",
+      "item": "Limit public and write-endpoint abuse",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "I"
+      ],
+      "when": "Sign-up, contact, reset, API-key issuance or public writes",
+      "priority": "Before launch",
+      "owner": "Agent after plan; auth semantics require separate approval",
+      "implementation": "Set endpoint-specific network/user/API-client budgets, payload limits and timeouts; identify API clients without logging credential values. Preserve legitimate retries and webhooks.",
+      "verification": "A bounded local sequence reaches 429; a different permitted identity still works and spoofed forwarding headers cannot reset the budget.",
+      "sources": [
+        "O03",
+        "O07",
+        "P19",
+        "S18"
+      ],
+      "why": "Public actions can consume resources even without a login.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "A10",
+      "item": "Make automated sign-up and form abuse harder",
+      "profiles": [
+        "W",
+        "I"
+      ],
+      "when": "Public sign-up, contact or costly forms",
+      "priority": "Before launch",
+      "owner": "Agent existing local controls after plan; user enables new provider",
+      "implementation": "Combine endpoint limits with appropriate anti-automation controls. If a challenge provider is chosen, ask before adding the service and validate its result server-side before any side effect.",
+      "verification": "Mock accepted, rejected, expired and replayed challenge responses; rejected submissions send no email or create no account. No live challenge calls.",
+      "sources": [
+        "N01",
+        "O07",
+        "O03"
+      ],
+      "why": "Forms and sign-up routes should not become spam or resource-amplification tools.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "C05",
+      "item": "Put an appropriate edge proxy in front of public services",
+      "profiles": [
+        "W",
+        "A",
+        "G",
+        "S",
+        "I"
+      ],
+      "when": "Internet-exposed HTTP service",
+      "priority": "Before launch",
+      "owner": "User provider/DNS action; ask per infrastructure configuration",
+      "implementation": "Prefer the hosting platform’s existing TLS/CDN/abuse layer where suitable. Verify origin bypass protection and trusted proxy addresses; do not buy or add another CDN without need and approval.",
+      "verification": "Local config and topology review; user verifies TLS, origin reachability and protection in provider settings. Local checks cannot prove edge protection.",
+      "sources": [
+        "N02",
+        "S12",
+        "P19",
+        "S32"
+      ],
+      "why": "An edge service can handle transport and some abuse before requests reach the app.",
+      "reference_file": "modules/proxy-and-cdn.md"
+    },
+    {
+      "id": "I08",
+      "item": "Keep redirects on approved destinations",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Return URLs, sign-in redirects or forwarding endpoints",
+      "priority": "Before launch",
+      "owner": "Agent after plan; auth-flow changes ask-first",
+      "implementation": "Use fixed destination IDs or allowlisted parsed URLs. Reject scheme-relative and encoded bypasses; preserve valid application-relative navigation.",
+      "verification": "Local benign redirect succeeds; external, //host and encoded attacker destinations cannot become Location targets.",
+      "sources": [
+        "N03",
+        "O10"
+      ],
+      "why": "A trusted application link should not send someone to an unapproved destination.",
+      "reference_file": "modules/auth.md"
+    },
+    {
+      "id": "C06",
+      "item": "Authenticate the domain used to send email",
+      "profiles": [
+        "W",
+        "A",
+        "I"
+      ],
+      "when": "Application sends email from a custom domain",
+      "priority": "Before launch",
+      "owner": "User DNS and mail provider actions",
+      "implementation": "Identify actual senders and existing records; propose SPF, provider-issued DKIM and staged DMARC alignment. Never invent DNS values or access signing keys; avoid duplicate SPF records or premature rejection.",
+      "verification": "User supplies redacted provider verification and a synthetic message’s authentication result. Agent does not change DNS or send email.",
+      "sources": [
+        "N04",
+        "N05",
+        "N06"
+      ],
+      "why": "Receivers need a way to recognize mail sent for your domain.",
+      "reference_file": "modules/cloud.md"
+    },
+    {
+      "id": "B06",
+      "item": "Separate development from production data and credentials",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Multiple environments or deployed integrations",
+      "priority": "Before launch",
+      "owner": "Agent config references after plan; user provisions/rotates",
+      "implementation": "Use separate environment identifiers and least-privilege credentials; fixtures use synthetic data and mocked services. Do not copy production databases, credentials or environment files.",
+      "verification": "Inspect variable names and config references; local tests cannot reach production endpoints and use only synthetic records.",
+      "sources": [
+        "O14",
+        "S02"
+      ],
+      "why": "A local test should never spend production money or change real users’ data.",
+      "reference_file": "baseline.md"
+    },
+    {
+      "id": "SC05",
+      "item": "Keep dependency updates arriving automatically",
+      "profiles": [
+        "W",
+        "A",
+        "L",
+        "G",
+        "M",
+        "S",
+        "D",
+        "I"
+      ],
+      "when": "Managed dependencies",
+      "priority": "First week",
+      "owner": "Agent config after plan; user enables remote features",
+      "implementation": "Configure the detected ecosystem’s supported update service and review cadence. Preserve lockfile boundaries and script policy; do not auto-merge major or untested changes.",
+      "verification": "Parse update config and check paths against manifests; local patch/minor updates pass relevant checks. Scheduling remotely stays unverified.",
+      "sources": [
+        "N07",
+        "P03",
+        "S21"
+      ],
+      "why": "Regular small updates reduce avoidable dependency drift.",
+      "reference_file": "modules/supply-chain.md"
+    }
+  ],
+  "approval_date": "2026-09-27"
+}

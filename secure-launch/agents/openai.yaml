@@ -1,0 +1,4 @@
+interface:
+  display_name: "Secure Launch"
+  short_description: "A practical security checklist before launch"
+  default_prompt: "Use $secure-launch to inspect this project, prepare a tailored launch-security plan, and ask before applying changes."

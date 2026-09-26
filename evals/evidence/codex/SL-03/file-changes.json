@@ -1,0 +1,32 @@
+[
+  {
+    "file": "next.config.mjs",
+    "before_sha256": "3ecca038683be856f77f272676a78c8ce89fcbd8f18fa25eb4a765780c775487",
+    "after_sha256": "f7f90d19065dad802f378ed90289339aab7ea54c82da3fa4a9cf3cc12f22d449"
+  },
+  {
+    "file": "PLAN.md",
+    "before_sha256": null,
+    "after_sha256": "9f31d288300a3175b88246e3db20c8d7e6a3bc10afad1974c99edfafedc0d194"
+  },
+  {
+    "file": "REPORT.md",
+    "before_sha256": null,
+    "after_sha256": "ef17cc94d501e8993235f128a14c4dd50b595b18fed2a713947632592491b000"
+  },
+  {
+    "file": "app/page.jsx",
+    "before_sha256": "59373762470be390c52be2276a5d7caae8b033eae4c493a3ec5bb93d03ce8910",
+    "after_sha256": "b729497cdf02b0f380308aaa69d1a8e46cfc2194210cac434c9b24001a60d8ed"
+  },
+  {
+    "file": "scripts/build.mjs",
+    "before_sha256": "9e069530b57880a3428b08b9071340fabb2d66c2f4ab08f0bc122b05fdad28ca",
+    "after_sha256": "45d8cbed11bb92e6c8a37fc0fa318d5b643caa98382e69cadba916a96757201c"
+  },
+  {
+    "file": "app/api/chat/route.js",
+    "before_sha256": "6fb1ad03ece5fe3e7027048e3d2b24581bb3ea4929099b761c30b671c0c4c776",
+    "after_sha256": "c2c599e9ed284a20f06b8814d7f65a77a0c5f50d1441965a494d248bdaf87355"
+  }
+]

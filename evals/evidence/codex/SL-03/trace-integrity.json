@@ -1,0 +1,14 @@
+[
+  {
+    "file": "plan.jsonl",
+    "original_sha256": "1c6b3355d703c341b6bf06fe5cfa837e592f80a7421aa9ebad6fa1d04adde43f",
+    "archived_sha256": "8fda27f368f26d42ecfe5ef9aa44782ce92acf85ae0d3d4cdc1f736960d818ce",
+    "synthetic_marker_redactions": 3
+  },
+  {
+    "file": "apply.jsonl",
+    "original_sha256": "c4d7b1061e109ba3f2fc3b82857afc965649b96eee9578f96105f474518fb909",
+    "archived_sha256": "28d210ed462753a9eb1212709d366466800e88fcb60e870a6f55820ec77ec325",
+    "synthetic_marker_redactions": 1
+  }
+]

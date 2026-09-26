@@ -1,0 +1,35 @@
+{
+  "case": "SL-03",
+  "fixture": "nextjs-ai-chat",
+  "candidate_sha256": "bd99464798c2432ed16a2a1b16a23d46df24d9d83f5fd47be8034e62cce65443",
+  "requested_model": "gpt-5.6-terra",
+  "requested_effort": "medium",
+  "confirmed_model": "gpt-5.6-terra",
+  "confirmed_effort": "medium",
+  "trial_directory": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\trials\\SL-03",
+  "plan_exit": 0,
+  "plan_seconds": 142.12,
+  "thread_id": "01a0df24-88ba-77e3-a54a-2714a7a538fa",
+  "plan_usage": {
+    "input_tokens": 217281,
+    "cached_input_tokens": 178176,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5814,
+    "reasoning_output_tokens": 1787
+  },
+  "apply_exit": 0,
+  "apply_seconds": 215.91,
+  "apply_usage": {
+    "input_tokens": 615483,
+    "cached_input_tokens": 558848,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 16131,
+    "reasoning_output_tokens": 6798
+  },
+  "metadata_source": "C:\\Users\\aarav\\.codex\\sessions\\2026\\09\\27\\rollout-2026-09-27T00-45-08-01a0df24-88ba-77e3-a54a-2714a7a538fa.jsonl",
+  "metadata_fields": [
+    "turn_context.payload.model",
+    "turn_context.payload.effort"
+  ],
+  "confirmation_limit": "Harness metadata, not an independent provider-backend attestation."
+}

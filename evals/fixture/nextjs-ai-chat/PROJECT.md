@@ -1,0 +1,2 @@
+# Tiny chat demo
+Next.js app with an authenticated demo chat endpoint. All users, data and credential markers are synthetic. Responses are mocked locally and no model SDK is invoked. Keep the existing fake identity scheme, never introduce production credentials. Build via npm run build; it supplies a fixed synthetic environment canary and disables telemetry. This fixture has no fonts or other assets requiring a network download. Use loopback-only temporary servers.

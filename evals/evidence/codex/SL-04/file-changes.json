@@ -1,0 +1,22 @@
+[
+  {
+    "file": ".gitignore",
+    "before_sha256": null,
+    "after_sha256": "afcc66c5135b26c9369fcc9bfd7fb5dd9ecc1c1cab283333ea3a16d83df8f279"
+  },
+  {
+    "file": "PLAN.md",
+    "before_sha256": null,
+    "after_sha256": "ee66b7f77899618c1c744c664ec6a80cf7d3afb4bfbe2fb6ed08a7305f520f11"
+  },
+  {
+    "file": "REPORT.md",
+    "before_sha256": null,
+    "after_sha256": "9f2f53d431491a3f04a638aae4ce44c38f5b3808278543a1d8c708da390a3586"
+  },
+  {
+    "file": ".github/workflows/ci.yml",
+    "before_sha256": "612b53690895f0516f3373bf68630aae8e97a787b6b6c55d230910af040fdcc0",
+    "after_sha256": "a8a1d7d5ba0cb03308304335bf9469d48bc878e8bfd80e08e678a2fb6de16240"
+  }
+]

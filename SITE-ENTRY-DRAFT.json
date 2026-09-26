@@ -1,0 +1,36 @@
+{
+  "slug": "secure-launch",
+  "name": "Secure Launch",
+  "category": "Security",
+  "icon": "book",
+  "summary": "A practical security checklist and approved local fixes before you go live.",
+  "description": "Read the project, focus on day-one exposure, verify approved changes locally, and hand off provider and DNS work clearly.",
+  "tagline": "Launch with a clearer checklist.",
+  "stage": "Before you launch",
+  "role": "Turn the security work that matters for this project into a short, evidence-backed launch plan.",
+  "steps": [
+    "Classify",
+    "Prioritize",
+    "Verify"
+  ],
+  "bestFor": [
+    "Preparing a SaaS, API or internal tool for its first real users.",
+    "Checking secrets, access boundaries, webhooks and abuse limits without production scanning.",
+    "Reviewing an agent skill or MCP server before distribution."
+  ],
+  "workflow": [
+    "Read the repository and identify its features, users and data.",
+    "Present a short, prioritized checklist and a concrete plan for approval.",
+    "Ask separately for reserved changes and implement only approved local work.",
+    "Verify each change and list user actions, deferrals and unavailable checks."
+  ],
+  "prompt": "Use secure-launch before I launch this project. Read the repo, tailor a short security checklist and concrete local verification plan, then ask for approval before changing anything.",
+  "install": [],
+  "note": "Draft, local-only skill. No public installer is available yet. This is a launch-readiness pass, not a penetration test or compliance certificate. Mobile coverage is a starter set, not full MASVS. See the recorded evaluation limitations before publication.",
+  "repo": null,
+  "source": null,
+  "license": "MIT",
+  "version": "0.1.0",
+  "available": false,
+  "addedAt": "2026-09-27"
+}
