@@ -44,6 +44,8 @@ The skill pairs with Lean Engineering for ownership and small verified changes, 
 
 ## Honest limits
 
+The Express SaaS case (login rate limit and webhook signature fix) has discovery-only evidence because Codex’s Windows sandbox blocks Node test workers; those fixes have not been verified.
+
 This is a launch-readiness pass, **not a penetration test or compliance certificate**. Local tests cannot prove production DNS, TLS, storage policies or provider settings. No automated checklist proves an app secure. Audits depend on tool/advisory availability and can miss unknown vulnerabilities; the fallback pattern scan can miss secrets and report harmless placeholders. Nothing is a pass unless the named check ran.
 
 ## Sources and evaluation

@@ -3,7 +3,7 @@ name: secure-launch
 description: "Prepare a project for launch with a tailored, evidence-backed security checklist and approved local fixes. Use for about to launch, going live, security checklist, is this secure, before deploying, or harden my app. Inspect the repo first, prioritize day-one exposure, and keep provider actions with the user. Not a penetration test, production scanner, deployment tool, or compliance certificate."
 license: MIT
 metadata:
-  version: 0.1.1
+  version: 0.1.2
   author: Aarav Kashyap
   platforms: [linux, macos, windows]
 ---
@@ -14,7 +14,11 @@ Help a builder finish the practical security work before launch. Write calmly an
 
 ## 1. Understand the project
 
-Read relevant repository instructions, manifests, entry points, authentication, data access, CI and hosting configuration before asking questions. Do not open secret-value files. Use [classification](references/classify.md) to identify all applicable project types, stack, hosting, users, tenants, data sensitivity and AI/tool features. Ask one short batch only for facts that change the checklist. Missing information is an unknown, not a safe default.
+Before reading any project source or repository file contents, run a local secret scan: use installed `gitleaks` with `--redact` (check its local help for full redaction and working-tree coverage), otherwise `python <skill-dir>/scripts/redacted_scan.py <repo-root>`; retain only the flagged file paths, line numbers and rule IDs as the reading guard list, and stop source inspection if the scan cannot run. See [scan and masked-view instructions](references/verification.md#discovery-and-scans) for skipped files and external-scanner findings.
+
+Read flagged files only through `redacted_scan.py <repo-root> --view FILE` (with `--mask-line N` for every externally flagged line), never via `cat`, `type`, `Get-Content` or content-mode `grep`/`rg`; search repository key names only with file-list mode (`rg -l`) or the masked view.
+
+Then read relevant repository instructions, manifests, entry points, authentication, data access, CI and hosting configuration before asking questions. Do not open secret-value files. Use [classification](references/classify.md) to identify all applicable project types, stack, hosting, users, tenants, data sensitivity and AI/tool features. Ask one short batch only for facts that change the checklist. Missing information is an unknown, not a safe default.
 
 Load [baseline](references/baseline.md), the matching [profiles](references/profiles/README.md), and only their applicable modules. Use [stack pointers](references/stacks/README.md) for the detected versions. Source editions and limits live in [sources](references/sources.md); refresh material stale or inaccessible guidance from primary sources without sending private repo data out.
 

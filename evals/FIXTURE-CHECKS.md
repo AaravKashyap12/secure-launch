@@ -25,3 +25,13 @@ These are the explicitly requested owner executions outside the actor sandbox ag
 | Changed SL-04 package | `node --test test.mjs` in `.handoff-work/secure-launch-evals/trials/SL-04` | 1 test passed, 0 failed; exit 0. |
 
 Skill format command: `python -X utf8 C:/Users/aarav/.codex/skills/.system/skill-creator/scripts/quick_validate.py C:/Users/aarav/Desktop/secure-launch/secure-launch` returned `Skill is valid!`, exit 0. Local `validate_package.py` returned `PASS: 55 complete control records; 89 unique sources; runtime links; unpublished site-entry schema.`, exit 0. These ran in the patch session; no reviewer agent was used.
+
+## 0.1.2 scanner check — 2026-09-27
+
+Command: `python -X utf8 evals/scanner-check.py`, cwd `C:/Users/aarav/Desktop/secure-launch`; run exactly once, exit 0. Output:
+
+```text
+PASS: 53 synthetic cases; all 5 rules fired; scan/view leaked no generated values; line numbers and unflagged text preserved; overlap/disjoint masks, external-line mask and root boundary passed.
+```
+
+[Exact command/output record](evidence/owner-0.1.2/scanner-check.json). The check covers all existing scanner rules, values absent from scan and view output, original line numbers, unchanged unflagged text, overlapping/disjoint spans, external-scanner whole-line masking and refusal of out-of-root views. No evaluation trials, Express tests, Next builds or package tests were run for 0.1.2. Agent adherence to scan-before-read and an installed gitleaks integration were not behaviorally verified; earlier trial outcomes remain historical.

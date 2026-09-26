@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — 2026-09-27
+
+- Scan the working tree before reading project source and retain flagged locations as a reading guard.
+- Add line-numbered masked file viewing, overlapping-span redaction and explicit external-scanner line masks; forbid raw reads/search output for flagged files.
+- Extend generated scanner checks to verify masked values, preserved lines and safe view boundaries.
+- Clarify discovery-only Express evidence; no evaluation trials were run for this patch.
+
 ## 0.1.1 — 2026-09-27
 
 - Detect common hyphenated/provider credentials, unquoted assignments, inline connection credentials and client-exposed names without printing values; add a generated-fixture scanner check.

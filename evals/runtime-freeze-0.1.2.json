@@ -1,0 +1,7 @@
+{
+  "version": "0.1.2",
+  "sha256": "836364f4aa83e7415f335b175a97befab7989a6ed9a6db4d0bdbf34dbcb7babf",
+  "algorithm": "SHA-256 of sorted relative runtime path UTF-8 bytes followed by file bytes; exclude __pycache__ and .pyc",
+  "evaluation": "NOT RUN \u2014 user prohibited evaluation trials; scanner regression only",
+  "date": "2026-09-27"
+}

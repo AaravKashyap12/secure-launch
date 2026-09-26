@@ -1,0 +1,6 @@
+{
+  "command": "python -X utf8 evals/scanner-check.py",
+  "cwd": "C:\\Users\\aarav\\Desktop\\secure-launch",
+  "exit": 0,
+  "output": "PASS: 53 synthetic cases; all 5 rules fired; scan/view leaked no generated values; line numbers and unflagged text preserved; overlap/disjoint masks, external-line mask and root boundary passed.\n"
+}

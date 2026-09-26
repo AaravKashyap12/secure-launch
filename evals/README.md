@@ -19,3 +19,7 @@ See cases.md, results-2026-09-27.csv, RESULTS-2026-09-27.md and evidence/codex/.
 ## 0.1.1 patch status
 
 The explicitly authorized SL-01 run 2 is BLOCKED: permission metadata confirmed workspace-write before the task, but its Node test worker hit spawn EPERM. Owner stopped the session; no retry, application continuation or new SL-02/03/04 trials. A synthetic-marker output violation is recorded separately in its evidence. The once-only scanner regression and separately requested SL-03/04 owner checks passed. These do not promote historical actor outcomes. See RESULTS-2026-09-27.md and FIXTURE-CHECKS.md; runtime-freeze-0.1.1.json records the current candidate.
+
+## 0.1.2 patch status
+
+No evaluation trials run, as requested. The extended generated scanner/view check passed once (exit 0); see [FIXTURE-CHECKS.md](FIXTURE-CHECKS.md). Scan-first agent adherence and gitleaks integration remain unverified. Earlier trial outcomes are unchanged. Current frozen runtime SHA-256: `836364f4aa83e7415f335b175a97befab7989a6ed9a6db4d0bdbf34dbcb7babf`; see runtime-freeze-0.1.2.json.
