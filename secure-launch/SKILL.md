@@ -3,7 +3,7 @@ name: secure-launch
 description: "Prepare a project for launch with a tailored, evidence-backed security checklist and approved local fixes. Use for about to launch, going live, security checklist, is this secure, before deploying, or harden my app. Inspect the repo first, prioritize day-one exposure, and keep provider actions with the user. Not a penetration test, production scanner, deployment tool, or compliance certificate."
 license: MIT
 metadata:
-  version: 0.1.2
+  version: 0.1.3
   author: Aarav Kashyap
   platforms: [linux, macos, windows]
 ---
@@ -14,9 +14,11 @@ Help a builder finish the practical security work before launch. Write calmly an
 
 ## 1. Understand the project
 
-Before reading any project source or repository file contents, run a local secret scan: use installed `gitleaks` with `--redact` (check its local help for full redaction and working-tree coverage), otherwise `python <skill-dir>/scripts/redacted_scan.py <repo-root>`; retain only the flagged file paths, line numbers and rule IDs as the reading guard list, and stop source inspection if the scan cannot run. See [scan and masked-view instructions](references/verification.md#discovery-and-scans) for skipped files and external-scanner findings.
+Before reading any project source or repository file contents, run a local secret scan: use installed `gitleaks` with `--redact` (check its local help for full redaction and working-tree coverage), otherwise run `<python-command> <skill-dir>/scripts/redacted_scan.py <repo-root>`, choosing whichever of `python3`, `python` or `py -3` is available and reports Python 3; retain only the flagged file paths, line numbers and rule IDs as the reading guard list, and stop source inspection if the scan cannot run. See [scan and masked-view instructions](references/verification.md#discovery-and-scans) for skipped files and external-scanner findings.
 
-Read flagged files only through `redacted_scan.py <repo-root> --view FILE` (with `--mask-line N` for every externally flagged line), never via `cat`, `type`, `Get-Content` or content-mode `grep`/`rg`; search repository key names only with file-list mode (`rg -l`) or the masked view.
+If no Python 3 command is available and gitleaks is not installed, do not read source; tell the user exactly one line, "Install Python 3 or gitleaks so I can scan before reading source.", then stop.
+
+Read flagged files only through `<python-command> <skill-dir>/scripts/redacted_scan.py <repo-root> --view FILE` (with `--mask-line N` for every externally flagged line), never via `cat`, `type`, `Get-Content` or content-mode `grep`/`rg`; search repository key names only with file-list mode (`rg -l`) or the masked view.
 
 Then read relevant repository instructions, manifests, entry points, authentication, data access, CI and hosting configuration before asking questions. Do not open secret-value files. Use [classification](references/classify.md) to identify all applicable project types, stack, hosting, users, tenants, data sensitivity and AI/tool features. Ask one short batch only for facts that change the checklist. Missing information is an unknown, not a safe default.
 

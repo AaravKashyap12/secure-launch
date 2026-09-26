@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-09-27
+
+- Resolve the bundled scanner and masked-view runtime through available `python3`, `python` or `py -3`, confirming Python 3.
+- If neither Python 3 nor gitleaks is available, keep source unread, give a one-line installation instruction and stop.
+- Documentation-only patch; no evaluation trials run.
+
 ## 0.1.2 — 2026-09-27
 
 - Scan the working tree before reading project source and retain flagged locations as a reading guard.

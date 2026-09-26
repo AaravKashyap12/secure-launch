@@ -23,3 +23,7 @@ The explicitly authorized SL-01 run 2 is BLOCKED: permission metadata confirmed 
 ## 0.1.2 patch status
 
 No evaluation trials run, as requested. The extended generated scanner/view check passed once (exit 0); see [FIXTURE-CHECKS.md](FIXTURE-CHECKS.md). Scan-first agent adherence and gitleaks integration remain unverified. Earlier trial outcomes are unchanged. Current frozen runtime SHA-256: `836364f4aa83e7415f335b175a97befab7989a6ed9a6db4d0bdbf34dbcb7babf`; see runtime-freeze-0.1.2.json.
+
+## 0.1.3 patch status
+
+Documentation-only interpreter discovery and missing-tool stop behavior. No evaluation trials or scanner tests run for this patch; historical outcomes are unchanged. Current frozen runtime SHA-256: `c5a61a2a8af2d1bb561185eb19da6f9bef5140aae02e4831a1465899fbfd6912`; see runtime-freeze-0.1.3.json.
