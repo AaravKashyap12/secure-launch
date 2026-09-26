@@ -3,12 +3,14 @@
     "file": "plan.jsonl",
     "original_sha256": "b8c5822c4fa1036362d9c0a6bed12ae0336b3b1bd297913882229becd7daed89",
     "archived_sha256": "b8c5822c4fa1036362d9c0a6bed12ae0336b3b1bd297913882229becd7daed89",
-    "synthetic_marker_redactions": 0
+    "synthetic_marker_redactions": 0,
+    "archive_transform": "Synthetic-canary redaction plus canonical UTF-8/LF; hashes are exact file bytes."
   },
   {
     "file": "apply.jsonl",
     "original_sha256": "e02ed9a0e21f7f5d82f06289f1b4a21fb5d90b5bda13edbe92654c4448675793",
     "archived_sha256": "e02ed9a0e21f7f5d82f06289f1b4a21fb5d90b5bda13edbe92654c4448675793",
-    "synthetic_marker_redactions": 0
+    "synthetic_marker_redactions": 0,
+    "archive_transform": "Synthetic-canary redaction plus canonical UTF-8/LF; hashes are exact file bytes."
   }
 ]
