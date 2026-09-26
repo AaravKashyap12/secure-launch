@@ -1,0 +1,30 @@
+[
+  {
+    "name": "scanner-check",
+    "command": "C:\\Users\\aarav\\.agent-reach-venv\\Scripts\\python.exe -X utf8 C:\\Users\\aarav\\Desktop\\secure-launch\\evals\\scanner-check.py",
+    "cwd": "C:\\Users\\aarav\\Desktop\\secure-launch",
+    "exit": 0,
+    "output": "PASS: 50 synthetic cases; all 5 rules fired; no generated values in output; scanner exit 1 expected.\n"
+  },
+  {
+    "name": "SL-03 owner Next build",
+    "command": "node scripts/build.mjs",
+    "cwd": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\trials\\SL-03",
+    "exit": 0,
+    "output": "\u25b2 Next.js 16.3.6 (webpack)\n\u2713 Running next.config.mjs took 41ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 5.5s\n  Running TypeScript ...\n  Finished TypeScript in 3ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \n  Generating static pages using 5 workers (2/4) \n  Generating static pages using 5 workers (3/4) \n\u2713 Generating static pages using 5 workers (4/4) in 1208ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n\u250c \u25cb /\n\u251c \u25cb /_not-found\n\u2514 \u0192 /api/chat\n\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n"
+  },
+  {
+    "name": "SL-03 owner client bundle grep",
+    "command": "Python: scan .next/static bytes for synthetic canary, NEXT_PUBLIC_MODEL_KEY and X-Model-Key; assert nonempty file set and zero matches",
+    "cwd": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\trials\\SL-03",
+    "exit": 0,
+    "output": "scanned_files=21; matching_files=0; paths=[]"
+  },
+  {
+    "name": "SL-04 owner Node tests",
+    "command": "node --test test.mjs",
+    "cwd": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\trials\\SL-04",
+    "exit": 0,
+    "output": "TAP version 13\n# Subtest: normalizes whitespace\nok 1 - normalizes whitespace\n  ---\n  duration_ms: 0.9596\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 116.8664\n"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "version": "0.1.1",
+  "sha256": "2d33422dba2ca88cb55752cbed63ac681e325bce121c1dae1d32f3c21e99bdbd",
+  "algorithm": "SHA-256 of sorted relative runtime path UTF-8 bytes followed by file bytes; exclude __pycache__ and .pyc",
+  "case": "SL-01 run 2",
+  "date": "2026-09-27"
+}

@@ -15,3 +15,7 @@ See cases.md, results-2026-09-27.csv, RESULTS-2026-09-27.md and evidence/codex/.
 ## Recorded outcome
 
 1 PASS, 2 PARTIAL, 1 BLOCKED across four once-only sessions. See [results](RESULTS-2026-09-27.md). Actual user approvals were obtained for every performed continuation; the controller did not fabricate permission. The initial SL-02 approval-review rejection and its resolution are retained.
+
+## 0.1.1 patch status
+
+The explicitly authorized SL-01 run 2 is BLOCKED: permission metadata confirmed workspace-write before the task, but its Node test worker hit spawn EPERM. Owner stopped the session; no retry, application continuation or new SL-02/03/04 trials. A synthetic-marker output violation is recorded separately in its evidence. The once-only scanner regression and separately requested SL-03/04 owner checks passed. These do not promote historical actor outcomes. See RESULTS-2026-09-27.md and FIXTURE-CHECKS.md; runtime-freeze-0.1.1.json records the current candidate.

@@ -6,7 +6,7 @@ Load only controls selected for actual project features. Defaults below follow t
 
 - **Why:** A short inventory keeps irrelevant advice out of the launch list.
 - **Applies:** Every project.
-- **Default priority:** Before launch.
+- **Default priority:** Process step, not a list item.
 - **Who / approval:** Agent proposes; user confirms unknowns.
 - **Implementation:** Inspect manifests, entry points, CI and data paths without opening secret values.
 - **Local verification:** Cite evidence for each selected profile and module; record unknowns.
@@ -19,7 +19,7 @@ Load only controls selected for actual project features. Defaults below follow t
 - **Applies:** Build, source and release material.
 - **Default priority:** Before launch.
 - **Who / approval:** Agent redacted checks; user rotates.
-- **Implementation:** Inspect references to credentials; allowlist placeholders and documented public keys.
+- **Implementation:** Inspect references to credentials; distinguish placeholders and documented public keys. If a template or example contains a credential-shaped value, the plan must propose replacing it with a clear placeholder after plan approval, even when the value is synthetic. Add a separate **You'll need to** action: rotate the value if it was ever real. Do not print the value or assume a pattern proves validity.
 - **Local verification:** Redacted local scan plus built-artifact check; no online key validation.
 - **Stack pointers:** use the detected stack via [stack index](stacks/README.md); turn the proof above into a specific command and working directory before approval.
 - **Sources:** [O14](sources.md#o14), [S28](sources.md#s28), [S30](sources.md#s30), [P18](sources.md#p18).
@@ -50,7 +50,7 @@ Load only controls selected for actual project features. Defaults below follow t
 
 - **Why:** Clear evidence prevents an unchecked setting from looking finished.
 - **Applies:** Every project.
-- **Default priority:** Before launch.
+- **Default priority:** Process step, not a list item.
 - **Who / approval:** Agent.
 - **Implementation:** Separate planned action from observed behavior and unavailable environment evidence.
 - **Local verification:** Each claimed pass has command, exit result and bounded evidence.

@@ -5,10 +5,19 @@ parser=argparse.ArgumentParser();parser.add_argument('directory');args=parser.pa
 root=Path(args.directory).resolve()
 if not root.is_dir(): parser.error('Expected a directory')
 skip={'.git','node_modules','.venv','venv','__pycache__','.candidate'}
-rules={
-    'credential-shaped':re.compile(r'(?i)\b(?:sk_(?:live|test|proj)_|ghp_|AKIA)[A-Za-z0-9_\-]{12,}'),
-    'private-key-marker':re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
-    'assigned-secret':re.compile(r"(?i)(?:api[_-]?key|secret|password|token)\s*[:=]\s*['\"][^'\"]{16,}['\"]")
+rules = {
+    'credential-shaped': re.compile(
+        r'\b(?:sk_(?:live|test|proj)_|sk-(?:ant-|proj-)?|AIza|xox[abp]-|github_pat_|gh[opsu]_|AKIA)[A-Za-z0-9_\-]{12,}'
+    ),
+    'private-key-marker': re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
+    'assigned-secret': re.compile(
+        r"(?i)\b[A-Z_][A-Z0-9_\-]*(?:KEY|SECRET|TOKEN|PASSWORD)[A-Z0-9_\-]*\b\s*[:=]\s*(?:['\"][^'\"]{16,}['\"]|[^\s'\"#;]{16,})"
+        r"|(?i:)(?<![\w-])(?:KEY|SECRET|TOKEN|PASSWORD)\s*[:=]\s*(?:['\"][^'\"]{16,}['\"]|[^\s'\"#;]{16,})"
+    ),
+    'inline-credentials': re.compile(r'(?i)\b[a-z][a-z0-9+.-]*://[^\s/:@]+:[^\s/@]+@[^\s/]+'),
+    'client-exposed': re.compile(
+        r'\b(?:NEXT_PUBLIC_|VITE_|EXPO_PUBLIC_|REACT_APP_)(?:[A-Z0-9_]*(?:KEY|SECRET|TOKEN)[A-Z0-9_]*)\b', re.I
+    ),
 }
 findings=[];scanned=0;skipped=0
 for file in root.rglob('*'):

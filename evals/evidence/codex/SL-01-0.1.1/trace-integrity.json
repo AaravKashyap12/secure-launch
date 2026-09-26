@@ -1,0 +1,72 @@
+[
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\bootstrap-command.json",
+    "raw_sha256": "31b6b84ac65029734bbb6857b1015e5f9e8adfb79d64115c6fd39683585098ba",
+    "archive_file": "bootstrap-command.json",
+    "archive_sha256": "31b6b84ac65029734bbb6857b1015e5f9e8adfb79d64115c6fd39683585098ba",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\bootstrap-final.md",
+    "raw_sha256": "c2e3ac47f4a325469c1a2d5f117e463ec943c721986d5d9f09ac4540b7d80526",
+    "archive_file": "bootstrap-final.md",
+    "archive_sha256": "c2e3ac47f4a325469c1a2d5f117e463ec943c721986d5d9f09ac4540b7d80526",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\bootstrap-prompt.txt",
+    "raw_sha256": "e273a894b41260b14808e6ddc9f0d7a9770c6c302901825fe0a3379772b8621f",
+    "archive_file": "bootstrap-prompt.txt",
+    "archive_sha256": "e273a894b41260b14808e6ddc9f0d7a9770c6c302901825fe0a3379772b8621f",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\bootstrap-stderr.txt",
+    "raw_sha256": "83907dfb02bfab3f6bd8007da14bac3786e06403f230aac572478847243a50b3",
+    "archive_file": "bootstrap-stderr.txt",
+    "archive_sha256": "83907dfb02bfab3f6bd8007da14bac3786e06403f230aac572478847243a50b3",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\bootstrap.jsonl",
+    "raw_sha256": "35e2d44d7e6beddf28cb9fb514829b31c00976dd0d80edc23d17acedecd5d54e",
+    "archive_file": "bootstrap.jsonl",
+    "archive_sha256": "35e2d44d7e6beddf28cb9fb514829b31c00976dd0d80edc23d17acedecd5d54e",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\metadata.json",
+    "raw_sha256": "f6d0d2883306a284ebe21cb72c355582209045f78f6e2eca55a12e674e7c6db1",
+    "archive_file": "metadata.json",
+    "archive_sha256": "f6d0d2883306a284ebe21cb72c355582209045f78f6e2eca55a12e674e7c6db1",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\plan-command.json",
+    "raw_sha256": "7d87fcaae0346abc18c53feaa1a4042f4d9108f44aa3cb03ce00370b17037afb",
+    "archive_file": "plan-command.json",
+    "archive_sha256": "7d87fcaae0346abc18c53feaa1a4042f4d9108f44aa3cb03ce00370b17037afb",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\plan-prompt.txt",
+    "raw_sha256": "e9668a78470beffb4ba869149353699d6ba0634d20bf1b07d740a517b3ade310",
+    "archive_file": "plan-prompt.txt",
+    "archive_sha256": "e9668a78470beffb4ba869149353699d6ba0634d20bf1b07d740a517b3ade310",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\plan-stderr.txt",
+    "raw_sha256": "762688d0d21b54504832ee8871ae8ba2da12719389793590e88bf57130a5aca4",
+    "archive_file": "plan-stderr.txt",
+    "archive_sha256": "762688d0d21b54504832ee8871ae8ba2da12719389793590e88bf57130a5aca4",
+    "redaction_count": 0
+  },
+  {
+    "raw_path": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\patch-0.1.1\\SL-01\\plan.jsonl",
+    "raw_sha256": "c09a80e5f396af4232f816f9345020d28ece7f5e1429b7ea39dc14b83086a8a2",
+    "archive_file": "plan.jsonl",
+    "archive_sha256": "55194a8f08f51a02ed190d4738b2ae4c56e7f6fb2e8aae395be64892e3a658de",
+    "redaction_count": 1
+  }
+]

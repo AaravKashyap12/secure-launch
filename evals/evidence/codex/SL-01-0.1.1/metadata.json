@@ -1,0 +1,31 @@
+{
+  "case": "SL-01",
+  "run": 2,
+  "version": "0.1.1",
+  "candidate_sha256": "2d33422dba2ca88cb55752cbed63ac681e325bce121c1dae1d32f3c21e99bdbd",
+  "requested_model": "gpt-5.6-terra",
+  "requested_effort": "medium",
+  "trial_directory": "C:\\Users\\aarav\\Desktop\\agent skill library\\.handoff-work\\secure-launch-evals\\trials\\SL-01-0.1.1",
+  "bootstrap_exit": 0,
+  "bootstrap_seconds": 7.0,
+  "thread_id": "01a0df41-1569-79f3-b8bf-b7425ead4af4",
+  "bootstrap_usage": {
+    "input_tokens": 16027,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_output_tokens": 0
+  },
+  "confirmed_model": "gpt-5.6-terra",
+  "confirmed_effort": "medium",
+  "sandbox_policy": {
+    "type": "workspace-write",
+    "network_access": false,
+    "exclude_tmpdir_env_var": false,
+    "exclude_slash_tmp": false
+  },
+  "metadata_source": "C:\\Users\\aarav\\.codex\\sessions\\2026\\09\\27\\rollout-2026-09-27T01-16-19-01a0df41-1569-79f3-b8bf-b7425ead4af4.jsonl",
+  "metadata_fields": "turn_context.payload.{model,effort,sandbox_policy}",
+  "plan_exit": 4294967295,
+  "plan_seconds": 111.42
+}

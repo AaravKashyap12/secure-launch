@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a0df41-1569-79f3-b8bf-b7425ead4af4"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `projects.\"C:\\\\Users\\\\aarav\\\\Desktop\\\\agent skill library\\\\.handoff-work\\\\secure-launch-evals\\\\trials\\\\SL-01-0` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `projects.\"C:\\\\Users\\\\aarav\\\\Desktop\\\\agent skill library\\\\.handoff-work\\\\secure-launch-evals\\\\trials\\\\SL-01-0` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"READY"}}
+{"type":"turn.completed","usage":{"input_tokens":16027,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":5,"reasoning_output_tokens":0}}

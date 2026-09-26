@@ -3,7 +3,7 @@ name: secure-launch
 description: "Prepare a project for launch with a tailored, evidence-backed security checklist and approved local fixes. Use for about to launch, going live, security checklist, is this secure, before deploying, or harden my app. Inspect the repo first, prioritize day-one exposure, and keep provider actions with the user. Not a penetration test, production scanner, deployment tool, or compliance certificate."
 license: MIT
 metadata:
-  version: 0.1.0
+  version: 0.1.1
   author: Aarav Kashyap
   platforms: [linux, macos, windows]
 ---
@@ -22,7 +22,7 @@ Load [baseline](references/baseline.md), the matching [profiles](references/prof
 
 Follow [priority rules](references/priorities.md): Before launch is for reachable day-one exposure. Aim for 12–15 grouped, actionable items for a typical SaaS, fewer for a static site. This is a presentation target, not a cap that hides real issues. Logging hygiene, CSP rollout, contacts, CI pinning and update automation usually go in First week. Kubernetes, provenance, deeper ASVS L2 work, GraphQL complexity and MCP transport depth normally go in As you grow unless exposure requires earlier action.
 
-Use the [report format](references/report-template.md). Each item has a control ID, short explanation, applicability, priority, action owner, proposed files, local verification command and working directory, source IDs and evidence state. Choose one action status: **Already in place**, **I'll add this**, **You'll need to**, or **Not needed because**. “I'll add this” is a proposal. Keep OBSERVED / FAILED / NOT RUN / UNAVAILABLE evidence separate. Never infer a pass from a config file alone when behavior or deployed state is what matters.
+Use the [report format](references/report-template.md). Keep B01 inventory and B05 evidence recording as process steps, never checklist items. Put full per-item detail in the plan appendix below the short chat view. Each actionable item has a control ID, short explanation, applicability, priority, action owner, proposed files, local verification command and working directory, source IDs and evidence state. Choose one action status: **Already in place**, **I'll add this**, **You'll need to**, or **Not needed because**. “I'll add this” is a proposal. Keep OBSERVED / FAILED / NOT RUN / UNAVAILABLE evidence separate. Never infer a pass from a config file alone when behavior or deployed state is what matters.
 
 Present the concrete plan and ask for approval before any remediation. Approval for inspection is not approval to fix. Reuse an existing approval only when it expressly covers this exact plan; do not infer it from enthusiasm or elapsed time.
 

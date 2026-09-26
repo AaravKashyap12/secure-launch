@@ -4,11 +4,11 @@ Supersedes the Phase 1 priority defaults. [Priority policy](secure-launch/refere
 
 | ID | Item | Profiles | Default priority | Reference |
 | --- | --- | --- | --- | --- |
-| B01 | Know what is exposed and what data is held | W, A, L, G, M, S, D, I | Before launch | [baseline.md](secure-launch/references/baseline.md) |
+| B01 | Know what is exposed and what data is held | W, A, L, G, M, S, D, I | Process step, not a list item | [baseline.md](secure-launch/references/baseline.md) |
 | B02 | Keep confidential values out of shipped files | W, A, L, G, M, S, D, I | Before launch | [baseline.md](secure-launch/references/baseline.md) |
 | B03 | Keep builds repeatable and dependencies understood | W, A, L, G, M, S, D, I | First week | [baseline.md](secure-launch/references/baseline.md) |
 | B04 | Choose a clear security contact | W, A, L, G, M, S, D, I | First week | [baseline.md](secure-launch/references/baseline.md) |
-| B05 | Record what was checked and what remains | W, A, L, G, M, S, D, I | Before launch | [baseline.md](secure-launch/references/baseline.md) |
+| B05 | Record what was checked and what remains | W, A, L, G, M, S, D, I | Process step, not a list item | [baseline.md](secure-launch/references/baseline.md) |
 | W01 | Serve browser traffic securely | W, A, G, S, I | Before launch | [modules/web-platform.md](secure-launch/references/modules/web-platform.md) |
 | W02 | Set baseline browser response headers | W, A, G, S, I | Before launch | [modules/web-platform.md](secure-launch/references/modules/web-platform.md) |
 | W03 | Allow only intended cross-origin access | W, A, G, S, I | Before launch | [modules/web-platform.md](secure-launch/references/modules/web-platform.md) |

@@ -2,11 +2,11 @@
 
 | ID | Control | Default priority | Canonical reference |
 | --- | --- | --- | --- |
-| B01 | Know what is exposed and what data is held | Before launch | [baseline.md](baseline.md) |
+| B01 | Know what is exposed and what data is held | Process step, not a list item | [baseline.md](baseline.md) |
 | B02 | Keep confidential values out of shipped files | Before launch | [baseline.md](baseline.md) |
 | B03 | Keep builds repeatable and dependencies understood | First week | [baseline.md](baseline.md) |
 | B04 | Choose a clear security contact | First week | [baseline.md](baseline.md) |
-| B05 | Record what was checked and what remains | Before launch | [baseline.md](baseline.md) |
+| B05 | Record what was checked and what remains | Process step, not a list item | [baseline.md](baseline.md) |
 | W01 | Serve browser traffic securely | Before launch | [modules/web-platform.md](modules/web-platform.md) |
 | W02 | Set baseline browser response headers | Before launch | [modules/web-platform.md](modules/web-platform.md) |
 | W03 | Allow only intended cross-origin access | Before launch | [modules/web-platform.md](modules/web-platform.md) |

@@ -994,7 +994,7 @@
         "I"
       ],
       "when": "Every project",
-      "priority": "Before launch",
+      "priority": "Process step, not a list item",
       "owner": "Agent proposes; user confirms unknowns",
       "implementation": "Inspect manifests, entry points, CI and data paths without opening secret values.",
       "verification": "Cite evidence for each selected profile and module; record unknowns.",
@@ -1022,7 +1022,7 @@
       "when": "Build, source and release material",
       "priority": "Before launch",
       "owner": "Agent redacted checks; user rotates",
-      "implementation": "Inspect references to credentials; allowlist placeholders and documented public keys.",
+      "implementation": "Inspect credential references; distinguish documented public keys. Propose placeholder replacement for credential-shaped template/example values after plan approval; add a You'll need to action to rotate if ever real. Never print values.",
       "verification": "Redacted local scan plus built-artifact check; no online key validation.",
       "sources": [
         "O14",
@@ -1098,7 +1098,7 @@
         "I"
       ],
       "when": "Every project",
-      "priority": "Before launch",
+      "priority": "Process step, not a list item",
       "owner": "Agent",
       "implementation": "Separate planned action from observed behavior and unavailable environment evidence.",
       "verification": "Each claimed pass has command, exit result and bounded evidence.",

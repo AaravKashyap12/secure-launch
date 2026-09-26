@@ -1,0 +1,4 @@
+2026-09-26T19:46:19.631550Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-09-26T19:46:20.083798Z ERROR codex_core::session::session: failed to load skill C:\Users\aarav\.agents\skills\browser-harness\skills\browser-harness\SKILL.md: missing YAML frontmatter delimited by ---
+2026-09-26T19:46:20.083855Z ERROR codex_core::session::session: failed to load skill C:\Users\aarav\.agents\skills\browser-harness\src\browser_harness\SKILL.md: missing YAML frontmatter delimited by ---
+2026-09-26T19:46:25.125711Z  WARN codex_core::tasks: failed to flush rollout after emitting terminal turn event: thread 01a0df41-1569-79f3-b8bf-b7425ead4af4 not found
